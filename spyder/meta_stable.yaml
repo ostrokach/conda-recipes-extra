@@ -1,0 +1,39 @@
+package:
+  name: spyder
+  version: 2.3.0rc
+
+source:
+  fn: spyder-2.3.0rc.zip
+  url: https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-2.3.0rc.zip
+  sha1: 0a487cf49efc06cb6a2e9532153f901772969870
+
+build:
+  osx_is_app: True
+
+requirements:
+  build:
+    - python
+    - sphinx
+  run:
+    - python
+    - pyzmq
+    - ipython
+    - rope
+    - pyflakes
+    - pygments
+    - jinja2
+    - sphinx
+    - pep8
+    - pylint
+    - pyqt
+    - python.app      [osx]
+
+test:
+  commands:
+    - spyder -h
+  imports:
+    - spyderlib
+
+about:
+  home: http://code.google.com/p/spyderlib/
+  license: MIT

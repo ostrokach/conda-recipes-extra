@@ -1,0 +1,10 @@
+package:
+  name: sigcpp
+  version: "2.4.0"
+
+requirements:
+  build:
+    - mm-common
+    
+  run:
+    - mm-common

@@ -1,0 +1,27 @@
+package:
+  name: py-mysql2pgsql
+  version: "1.0.0"
+
+source:
+  git_url: https://github.com/philipsoutham/py-mysql2pgsql.git
+
+requirements:
+  build:
+    - python
+    - openssl
+    - readline
+    - setuptools
+    - sqlite
+    - system
+    - tk
+    - zlib
+    - termcolor
+  run:
+    - python
+    - openssl
+    - readline
+    - sqlite
+    - system
+    - tk
+    - zlib
+    - termcolor

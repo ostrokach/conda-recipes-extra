@@ -1,0 +1,12 @@
+package:
+  name: expat
+  version: "2.1.0"
+
+requirements:
+  build:
+
+  run:
+
+about:
+  home: 'http://expat.sourceforge.net/'
+  summary: 'The Expat XML Parser'

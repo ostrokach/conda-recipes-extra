@@ -1,0 +1,18 @@
+package:
+  name: cgal
+  version: "4.4"
+
+requirements:
+  build:
+    - boost
+    - gmp
+    - mpfr
+    
+  run:
+    - boost
+    - gmp
+    - mpfr
+
+about:
+  home: 'https://www.cgal.org/'
+  summary: 'CGAL - Computational Geometry Algorithms Library'

@@ -1,0 +1,35 @@
+package:
+  name: pandoc
+  version: 1.12.3 # [linux]
+  version: 1.13.1 # [osx]
+
+
+source:
+  fn: pandoc-1.12.3.tar.gz # [linux]
+  url: https://pandoc.googlecode.com/files/pandoc-1.12.3.tar.gz # [linux]
+  sha1: f519b5fb8c88ff4374432477dc12f68bbe238510 # [linux]
+  fn: pandoc-1.13.1.pkg # [osx]
+  url: https://github.com/jgm/pandoc/releases/download/1.13.1/pandoc-1.13.1-osx.pkg # [osx]
+  sha1: 60a7812fa3d875a43d4cb4cee766425727206a8d # [osx]
+
+test:
+  commands:
+    - pandoc --help
+
+requirements:           # [linux]
+  build:                # [linux]
+    - gmp 4.*           # [linux]
+    - libffi            # [linux]
+    - zlib              # [linux]
+  run:                  # [linux]
+    - gmp 4.*           # [linux]
+    - libffi            # [linux]
+    - zlib              # [linux]
+
+build:  # [linux]
+  number: 3 # [linux]
+
+about:
+  home: http://johnmacfarlane.net/pandoc/
+  license: GPL
+  summary: Universal markup converter

@@ -1,0 +1,11 @@
+package:
+  name: fontconfig
+  version: dev
+
+source:
+  git_url: git://anongit.freedesktop.org/fontconfig
+
+requirements:
+  build:
+
+  run:

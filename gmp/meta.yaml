@@ -1,0 +1,12 @@
+package:
+  name: gmp
+  version: "6.0.0"
+
+requirements:
+  build:
+    
+  run:
+
+about:
+  home: 'https://gmplib.org/'
+  summary: 'The GNU Multiple Precision Arithmetic Library'

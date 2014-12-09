@@ -1,0 +1,12 @@
+package:
+  name: mm-common
+  version: "0.9.7"
+
+source:
+  git_url: https://github.com/GNOME/mm-common.git
+
+requirements:
+  build:
+  
+  run:
+  

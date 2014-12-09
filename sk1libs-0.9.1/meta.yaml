@@ -1,0 +1,11 @@
+package:
+  name: sk1libs
+  version: "0.9.1"
+
+requirements:
+  build:
+    - python
+    - lcms
+  run:
+    - python
+    - lcms

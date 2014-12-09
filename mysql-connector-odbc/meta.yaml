@@ -1,0 +1,21 @@
+package:
+  name: mysql-connector-odbc
+  version: "5.3.4"
+
+#source:
+#  fn: mysql-connector-odbc-5.3.4-linux-glibc2.5-x86-64bit.tar.gz
+#  url: http://mirror.csclub.uwaterloo.ca/mysql/Downloads/Connector-ODBC/5.3/mysql-connector-odbc-5.3.4-linux-glibc2.5-x86-64bit.tar.gz
+  
+requirements:
+  build:
+    - python
+    - unixodbc
+    - python-mysql-connection
+    
+  run:
+    - python
+    - unixodbc
+    - python-mysql-connection
+
+about:
+  summary: 'MySQL ODBN connector for unixODBN'

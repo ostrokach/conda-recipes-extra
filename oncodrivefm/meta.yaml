@@ -1,0 +1,41 @@
+package:
+  name: oncodrivefm
+  version: 2.3.0dev
+
+source:
+  git_url: https://bitbucket.org/bbglab/oncodrivefm.git
+
+build:
+
+requirements:
+  build:
+    - python
+    - distribute
+    - python-dateutil
+    - pytz
+    - numpy
+    - scipy
+    - pandas
+    - statsmodels
+    - bgcore
+    
+  run:
+    - python
+    - distribute
+    - python-dateutil
+    - pytz
+    - numpy
+    - scipy
+    - pandas
+    - statsmodels
+    - bgcore
+
+test:
+  commands:
+    - spyder -h
+  imports:
+    - spyderlib
+
+about:
+  home: http://code.google.com/p/spyderlib/
+  license: MIT

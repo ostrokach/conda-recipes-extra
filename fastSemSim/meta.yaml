@@ -1,0 +1,11 @@
+package:
+  name: fastsemsim
+  version: "0.8.1"
+
+requirements:
+  build:
+    - python
+    - zlib
+  run:
+    - python
+    - zlib

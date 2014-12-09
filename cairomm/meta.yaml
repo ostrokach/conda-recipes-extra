@@ -1,0 +1,24 @@
+package:
+  name: cairomm
+  version: "1.11.2"
+
+source:
+  git_url: git://git.cairographics.org/git/cairomm
+  
+requirements:
+  build:
+    - boost
+    - mm-common
+    - cairo
+    - sigcpp
+    - freetype
+    
+  run:
+    - boost
+    - mm-common
+    - cairo
+    - sigcpp
+    - freetype
+
+about:
+  summary: 'A C++ API for cairo'
