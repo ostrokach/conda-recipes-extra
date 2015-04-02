@@ -1,9 +1,9 @@
 package:
   name: spyder
-  version: 2.3.0dev
+  version: 2.3.5dev
 
 source:
-  hg_url: https://bitbucket.org/spyder-ide/spyderlib
+  git_url: git@github.com:spyder-ide/spyder.git
 
 build:
   osx_is_app: True

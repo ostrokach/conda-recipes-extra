@@ -10,12 +10,10 @@ requirements:
   build:
     - python
     - unixodbc
-    - python-mysql-connection
     
   run:
     - python
     - unixodbc
-    - python-mysql-connection
 
 about:
   summary: 'MySQL ODBN connector for unixODBN'
