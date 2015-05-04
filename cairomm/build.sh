@@ -1,12 +1,19 @@
 #!/bin/bash
 
+export XORG_PREFIX="$PREFIX"
+export PKG_CONFIG_PATH="$PREFIX/share/pkgconfig:$PREFIX/lib/pkgconfig"
 export ACLOCAL_FLAGS="-I$PREFIX/share/aclocal"
-export CAIROMM_LIBS="$PREFIX/lib"
-export CAIROMM_CFLAGS="$PREFIX/include"
-export PKG_CONFIG_PATH="$PREFIX/include"
-./autogen.sh LDFLAGS="-L$PREFIX/lib" CPPFLAGS="-I$PREFIX/include"
-./configure --prefix=$PREFIX LDFLAGS="-L$PREFIX/lib" CPPFLAGS="-I$PREFIX/include -I$PREFIX/include/cairo -I$PREFIX/include/sigc++-2.0 -I$PREFIX/lib/sigc++-2.0/include -I$PREFIX/include/freetype2 -I/usr/include -I/usr/include/X11 -I/usr/include/X11/extensions"
+
+export CFLAGS="-I$PREFIX/include -I$PREFIX/include/cairo -I$PREFIX/include/sigc++-2.0 -I$PREFIX/lib/sigc++-2.0/include -I$PREFIX/include/freetype2 -I$PREFIX/include/X11 -I$PREFIX/include/X11/Xtrans -I$PREFIX/X11/extensions"
+export CAIROMM_CFLAGS="-I$PREFIX/include"
+
+export CPPFLAGS="-I$PREFIX/include -I$PREFIX/include/cairo -I$PREFIX/include/sigc++-2.0 -I$PREFIX/lib/sigc++-2.0/include -I$PREFIX/include/freetype2 -I$PREFIX/include/X11 -I$PREFIX/include/X11/Xtrans -I$PREFIX/X11/extensions"
+
+export LDFLAGS="-L$PREFIX/lib"
+export CAIROMM_LIBS="$-LPREFIX/lib"
+
+./autogen.sh 
+./configure --prefix=$PREFIX  --disable-documentation
 make
 make install
-unset ACLOCAL_FLAGS CAIROMM_LIBS CAIROMM_CFLAGS
 

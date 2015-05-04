@@ -1,0 +1,34 @@
+package:
+  name: stride
+  version: "1.6.4"
+
+
+source:
+  fn: stride.tar.gz
+  url: http://webclu.bio.wzw.tum.de/stride/stride.tar.gz
+  md5: 3517d7c97a108454c8791e9e680ccd10
+
+
+build:
+  number: 1
+
+
+requirements:
+  build:
+    - gcc
+
+  run:
+
+
+test:
+  requires: 
+    - stride
+
+  commands:
+    - stride
+
+
+about:
+  home: http://webclu.bio.wzw.tum.de/stride/
+  license: Free for academic use.
+  summary: "STRIDE: Protein secondary structure assignment from atomic coordinates."

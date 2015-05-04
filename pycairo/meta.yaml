@@ -1,0 +1,38 @@
+package:
+  name: pycairo
+  version: "1.10.0"
+
+source:
+  git_url: git://git.cairographics.org/git/pycairo
+  git_tag: master
+  # fn: pycairo-1.10.0.tar.bz2
+  # url: http://cairographics.org/releases/pycairo-1.10.0.tar.bz2
+
+build:
+  number: 4
+
+requirements:
+  build:
+    - setuptools
+    - pkg-config
+    - gcc
+    - python
+    - cairo
+    - libxrender
+    - libxext
+
+  run:
+    - libgcc
+    - python
+    - cairo
+    - libxrender
+    - libxext 
+
+test:
+  imports: 
+    - cairo
+
+about:
+  home: http://cairographics.org/pycairo/
+  license: LGPL 3
+  summary: 'Python 3 bindings for cairo'

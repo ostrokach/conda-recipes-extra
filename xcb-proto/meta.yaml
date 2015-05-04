@@ -1,0 +1,27 @@
+package:
+  name: xcb-proto
+  version: 1.11
+
+source:
+  git_url: http://anongit.freedesktop.org/git/xcb/proto.git
+
+
+requirements:
+  build:
+    - gcc
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - util-macros
+    - m4
+    - python
+
+  run:
+    - libgcc
+    - util-macros
+    - m4
+    - python
+
+about:
+  home: 'http://cgit.freedesktop.org/xcb/proto/'

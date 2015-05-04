@@ -1,23 +1,28 @@
 package:
     name: boost
-    version: 1.55.0
+    version: 1.58.0
 
-#source:
-#    fn: boost_1_55_0.tar.bz2
-#    url: http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.bz2
+source:
+   fn: boost_1_58_0.tar.bz2
+   url: http://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.tar.bz2
 
 build:
-    number: 0
+    number: 1
 
 requirements:
     build:
+      - gcc
+      - bzip2
+      - zlib
+      - icu 
 
     run:
-
-test:
-    imports:
+      - libgcc
+      - bzip2
+      - zlib
+      - icu
 
 about:
     home: http://www.boost.org/
     license: Boost-1.0
-
+    summary: All Boost libraries except for Boost-Python. Both shared and static libraries are included.

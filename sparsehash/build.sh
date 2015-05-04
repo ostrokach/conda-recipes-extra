@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cp /home/kimlab1/strokach/programs/archives/sparsehash-2.0.2.tar.gz .
-tar xzvf sparsehash*
-cd sparsehash*
+export CFLAGS="-I$PREFIX/include"
+export LDFLAGS="-L$PREFIX/lib"
+
 ./configure --prefix=$PREFIX
 make
 make install

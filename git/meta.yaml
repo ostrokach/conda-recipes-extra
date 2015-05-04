@@ -1,0 +1,27 @@
+package:
+  name: git 
+  version: 2.4.0
+
+source:
+  fn: git.zip
+  url: https://github.com/git/git/archive/master.zip
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - gcc
+    - openssl 
+    - curl
+    - expat
+
+  run:
+    - libgcc
+    - openssl
+    - curl
+    - expat
+
+about:
+  home: https://github.com/git/git 
+  license: GPLv2

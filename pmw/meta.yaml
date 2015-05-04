@@ -1,0 +1,25 @@
+package:
+  name: pmw
+  version: 2.0.0
+
+build:
+  number: 1
+
+requirements:
+    build:
+      - python
+      - tk
+
+    run:
+      - python
+      - tk
+
+test:
+  requires:
+    - python
+    - tk
+    
+about:
+  home: https://sourceforge.net/projects/pmw/
+  license: MIT License
+

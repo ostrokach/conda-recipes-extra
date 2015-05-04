@@ -1,0 +1,33 @@
+package:
+  name: byobu
+  version: "5.92"
+
+
+source:
+  fn: byobu_5.92.orig.tar.gz
+  url: https://launchpad.net/byobu/trunk/5.92/+download/byobu_5.92.orig.tar.gz
+  md5: 8fe94f12c1d2960523dba3b061bce051
+
+
+build:
+  number: 2
+
+
+requirements:
+  build:
+    - gcc
+    - ncurses
+    - libevent
+    - tmux
+
+  run:
+    - ncurses
+    - libevent
+    - tmux
+
+
+about:
+  home: http://byobu.co/
+  license: GPLv3
+  summary: Byobu is a GPLv3 open source text-based window manager and terminal multiplexer.
+           (Compiled on CentOS 6.5).

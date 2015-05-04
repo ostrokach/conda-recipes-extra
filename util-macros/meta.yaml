@@ -1,0 +1,23 @@
+package:
+  name: util-macros
+  version: 1.19.0
+
+source:
+  git_url: http://anongit.freedesktop.org/git/xorg/util/macros.git
+
+requirements:
+  build:
+    - gcc
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - m4
+    - python
+
+  run:
+    - libgcc
+    - m4
+
+about:
+  home: 'http://cgit.freedesktop.org/xorg/util/macros/'

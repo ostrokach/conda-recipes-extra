@@ -1,0 +1,22 @@
+package:
+  name: foldx
+  version: "3.0.6"
+
+
+build:
+  number: 1
+
+
+test:
+  requires: 
+    - foldx
+
+  commands:
+    - foldx -h
+
+
+about:
+  home: http://foldx.crg.es/
+  license: Free for internal research use only.
+  summary: A force field for energy calculations and protein design.
+

@@ -1,0 +1,39 @@
+package:
+  name: dssp
+  version: 2.2.1
+
+source:
+  fn: dssp-2.2.1.tgz
+  url: ftp://ftp.cmbi.ru.nl/pub/software/dssp/dssp-2.2.1.tgz
+  md5: 0faa63ea1f0c69def077530de0cf84c1
+
+
+build:
+  number: 1
+
+
+requirements:
+  build:
+    - gcc
+    - boost
+    - zlib
+    - bzip2
+
+  run:
+
+
+test:
+  files:
+    - test_dssp.sh
+
+  requires: 
+    - dssp
+
+  commands:
+    - source test_dssp.sh
+
+
+about:
+  home: http://swift.cmbi.ru.nl/gv/dssp/
+  license: Boost
+  summary: The DSSP program was designed by Wolfgang Kabsch and Chris Sander to standardize secondary structure assignment. 

@@ -1,0 +1,17 @@
+package:
+  name: mysql-connector-python
+  version: 2.0.3
+
+#source:
+#  fn: mysql-connector-python-2.0.3.tar.gz
+#  url: http://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-2.0.3.tar.gz
+  
+requirements:
+  build:
+    - python
+    
+  run:
+    - python
+    
+about:
+  summary: 'Python MySQL connector'

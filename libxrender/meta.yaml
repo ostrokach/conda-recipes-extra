@@ -1,0 +1,29 @@
+package:
+  name: libxrender
+  version: 0.9.8
+
+source:
+  git_url: http://anongit.freedesktop.org/git/xorg/lib/libXrender.git
+
+requirements:
+  build:
+    - gcc
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - util-macros
+    - m4
+    - python
+    - libx11
+    - renderproto
+
+  run:
+    - libgcc
+    - util-macros
+    - m4
+    - libx11
+    - renderproto
+
+about:
+  home: 'http://cgit.freedesktop.org/xorg/lib/libXrender/'

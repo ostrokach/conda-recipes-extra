@@ -1,0 +1,21 @@
+package:
+  name: mysql
+  version: "5.5.43"
+
+source:
+  fn: mysql-5.5.43-linux2.6-x86_64.tar.gz [linux]
+  url: http://cdn.mysql.com/Downloads/MySQL-5.5/mysql-5.5.43-linux2.6-x86_64.tar.gz [linux]
+  md5: a3b38b802f261164cf3af6e0efb1352d
+
+build:
+  number: 3
+
+requirements:
+  build:
+    - system [linux]
+
+about:
+  home: http://www.mysql.com
+  license: GPL
+
+# vim:set ts=8 sw=2 sts=2 tw=78 et:

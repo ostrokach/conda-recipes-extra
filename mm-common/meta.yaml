@@ -7,6 +7,10 @@ source:
 
 requirements:
   build:
-  
+    - gcc
+    - autoconf
+    - automake
+
   run:
-  
+    - libgcc
+

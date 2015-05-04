@@ -1,0 +1,35 @@
+package:
+    name: pymol
+    version: 1.7.5
+
+build:
+    number: 1
+
+requirements:
+    build:
+      - python
+      - libpng
+      - freeglut
+      - freetype
+      - numpy
+      - tk
+      - pmw
+      - libxml2
+
+    run:
+      - python
+      - libpng
+      - freeglut
+      - freetype
+      - numpy
+      - tk
+      - pmw
+      - libxml2
+
+test:
+    imports:
+
+about:
+    home: http://sourceforge.net/projects/pymol/
+    license: Python License (CNRI Python License)
+

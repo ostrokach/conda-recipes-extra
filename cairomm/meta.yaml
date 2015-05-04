@@ -7,18 +7,36 @@ source:
   
 requirements:
   build:
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - gcc
     - boost
     - mm-common
     - cairo
     - sigcpp
     - freetype
-    
+    - libxtrans
+    - libx11
+    - libxrender
+    - renderproto
+    - util-macros
+    - libxext
+
   run:
+    - libgcc
     - boost
     - mm-common
     - cairo
     - sigcpp
     - freetype
+    - libxtrans
+    - libx11
+    - libxrender
+    - renderproto
+    - util-macros
+    - libxext
 
 about:
   summary: 'A C++ API for cairo'

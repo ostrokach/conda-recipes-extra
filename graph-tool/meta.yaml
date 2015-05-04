@@ -1,33 +1,43 @@
 package:
   name: graph-tool
-  version: "2.2.35"
+  version: 2.2.42
+
+source:
+  fn: graph-tool-2.2.42.tar.bz2
+  url: https://downloads.skewed.de/graph-tool/graph-tool-2.2.42.tar.bz2
 
 build:
-  # The build number should be incremented for new builds of the same version
-  number: 2       # (defaults to 0)
+  number: 1
   
 requirements:
   build:
+    - pkg-config
+    - gcc
     - python
     - numpy
     - scipy
     - cairo
     - cairomm
-    - py2cairo
+    - py2cairo # [py2k]
+    - pycairo # [py3k]
     - boost
+    - boost-python
     - cgal
     - sparsehash
     - freetype
     - expat
     
   run:
+    - libgcc
     - python
     - numpy
     - scipy
     - cairo
     - cairomm
-    - py2cairo
+    - py2cairo # [py2k]
+    - pycairo # [py3k]
     - boost
+    - boost-python
     - cgal
     - sparsehash
     - freetype
@@ -35,3 +45,4 @@ requirements:
 
 about:
   summary: 'Efficient network analysis'
+  license: GPL

@@ -1,0 +1,24 @@
+package:
+  name: pthread-stubs
+  version: 0.3
+
+source:
+  git_url: http://anongit.freedesktop.org/git/xcb/pthread-stubs.git
+
+requirements:
+  build:
+    - gcc
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - util-macros
+    - m4
+
+  run:
+    - libgcc
+    - util-macros
+    - m4
+
+about:
+  home: 'http://cgit.freedesktop.org/xcb/pthread-stubs/'

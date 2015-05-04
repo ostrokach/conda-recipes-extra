@@ -1,0 +1,20 @@
+package:
+  name: doxygen
+  version: 1.8
+
+source:
+  git_url: https://github.com/doxygen/doxygen.git
+
+requirements:
+  build:
+    - gcc
+    - graphviz
+    - flex
+
+  run:
+    - libgcc
+    - graphviz
+    - flex
+
+about:
+  home: 'http://www.stack.nl/~dimitri/doxygen/index.html'

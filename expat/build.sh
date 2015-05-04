@@ -1,8 +1,9 @@
 #!/bin/bash
 
-cp /home/kimlab1/strokach/programs/archives/expat-2.1.0.tar.gz .
-tar xzvf expat*
-cd expat*
+export CFLAGS="-I$PREFIX/include"
+export LDFLAGS="-L$PREFIX/lib"
+
+alias CC=gcc
 ./configure --prefix=$PREFIX
 make
 make install

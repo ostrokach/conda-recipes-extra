@@ -1,0 +1,19 @@
+package:
+  name: conda-manager
+  version: "0.1.0"
+
+source:
+  git_url: git@github.com:spyder-ide/conda-manager.git
+
+build:
+  number: 0
+  
+requirements:
+  build:
+    - python
+    - spyder
+    
+  run:
+    - python
+    - spyder
+

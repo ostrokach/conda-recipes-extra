@@ -1,0 +1,38 @@
+package:
+  name: provean
+  version: "1.1.5"
+
+
+source:
+  fn: provean-1.1.5.tar.gz
+  url: http://iweb.dl.sourceforge.net/project/provean/provean-1.1.5.tar.gz
+
+
+build:
+  number: 1
+
+
+requirements:
+  build:
+    - gcc
+    - blast
+    - cd-hit
+
+  run:
+    - blast
+    - cd-hit
+
+
+# Can't do a thorough test because that requires a blast database
+test:
+  requires: 
+    - provean
+
+  commands:
+    - which provean
+
+
+about:
+  home: http://provean.jcvi.org/
+  license: GPL3
+  summary: PROVEAN (Protein Variation Effect Analyzer) is a software tool which predicts whether an amino acid substitution or indel has an impact on the biological function of a protein.

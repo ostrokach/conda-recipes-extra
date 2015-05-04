@@ -1,0 +1,27 @@
+package:
+  name: libxau
+  version: 1.0.8
+
+source:
+  git_url: http://anongit.freedesktop.org/git/xorg/lib/libXau.git
+
+requirements:
+  build:
+    - gcc
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - util-macros
+    - m4
+    - python
+    - xproto
+
+  run:
+    - libgcc
+    - util-macros
+    - m4
+    - xproto
+
+about:
+  home: 'http://cgit.freedesktop.org/xorg/proto/xproto/'

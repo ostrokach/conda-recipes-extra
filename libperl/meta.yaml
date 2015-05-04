@@ -1,0 +1,27 @@
+package:
+    name: libperl
+    version: 0.002
+
+source:
+    fn: master.zip
+    url: https://github.com/Leont/libperl--/archive/master.zip
+
+build:
+    number: 0
+
+requirements:
+    build:
+      - gcc
+      - perl
+      - boost
+
+    run:
+      - libgcc
+      - perl
+      - boost
+
+about:
+    home: http://maven.apache.org/
+    license: Apache License v2.0
+
+

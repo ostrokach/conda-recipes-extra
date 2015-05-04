@@ -1,0 +1,33 @@
+package:
+  name: cd-hit
+  version: 4.6.1
+
+
+source:
+  git_url: https://github.com/ostrokach/cdhit.git
+
+
+build:
+  number: 1
+
+
+requirements:
+  build:
+    - gcc
+
+  run:
+    - libgcc
+
+
+# test:
+#   requires: 
+#     - cd-hit
+# 
+#   commands:
+#     - cd-hit -h
+
+
+about:
+  home: https://code.google.com/p/cdhit/
+  license: GPL3
+  summary: CD-HIT is a program for clustering DNA/protein sequence database at high identity with tolerance.

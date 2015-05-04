@@ -1,0 +1,16 @@
+package:
+  name: pymysql 
+  version: "dev"
+
+source:
+  git_url: https://github.com/PyMySQL/PyMySQL
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
