@@ -1,0 +1,22 @@
+package:
+  name: fuse
+  version: "2.9.4"
+
+source:
+  fn: fuse-2.9.4.tar.gz
+  url: http://softlayer-dal.dl.sourceforge.net/project/fuse/fuse-2.X/2.9.4/fuse-2.9.4.tar.gz
+
+build:
+  number: 2
+
+requirements:
+  build:
+    - system
+  run:
+    - system
+
+about:
+  home: http://sourceforge.net/projects/fuse/
+  license: LGPLv2
+  summary: FUSE makes it possible to implement a filesystem in a userspace program.
+           (Compiled on CentOS 6.5).

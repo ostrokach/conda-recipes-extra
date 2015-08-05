@@ -1,17 +1,16 @@
 package:
   name: graph-tool
-  version: 2.2.42
+  version: 2.2.44
 
 source:
-  fn: graph-tool-2.2.42.tar.bz2
-  url: https://downloads.skewed.de/graph-tool/graph-tool-2.2.42.tar.bz2
+  url: https://downloads.skewed.de/graph-tool/graph-tool-2.2.44.tar.bz2 
+  fn: graph-tool-2.2.44.tar.bz2
 
 build:
   number: 1
   
 requirements:
   build:
-    - pkg-config
     - gcc
     - python
     - numpy
@@ -26,7 +25,7 @@ requirements:
     - sparsehash
     - freetype
     - expat
-    
+    - libpng
   run:
     - libgcc
     - python
@@ -42,6 +41,7 @@ requirements:
     - sparsehash
     - freetype
     - expat
+    - libpng
 
 about:
   summary: 'Efficient network analysis'

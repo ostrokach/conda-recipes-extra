@@ -7,7 +7,7 @@ source:
    url: http://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.tar.bz2
 
 build:
-    number: 1
+    number: 2
 
 requirements:
     build:
@@ -15,7 +15,6 @@ requirements:
       - bzip2
       - zlib
       - icu 
-
     run:
       - libgcc
       - bzip2
@@ -24,5 +23,5 @@ requirements:
 
 about:
     home: http://www.boost.org/
-    license: Boost-1.0
+    license: Boost License
     summary: All Boost libraries except for Boost-Python. Both shared and static libraries are included.

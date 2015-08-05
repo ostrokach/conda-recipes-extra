@@ -1,0 +1,21 @@
+package:
+  name: pkg-config
+  version: "dev"
+
+source:
+  git_url: git://anongit.freedesktop.org/pkg-config 
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - system
+    - gcc
+  run:
+    - system
+
+about:
+  home: http://www.freedesktop.org/wiki/Software/pkg-config/ 
+  license: GPLv2
+  summary: pkg-config is a helper tool used when compiling applications and libraries. 

@@ -1,0 +1,26 @@
+package:
+  name: nvim
+  version: "dev"
+
+source:
+  git_url: https://github.com/neovim/neovim.git
+
+build:
+  number: 1
+  
+requirements:
+  build:
+    - gcc
+    - cmake
+    - libtool
+    - autoconf
+    - automake
+    - pkg-config
+    - curl
+    - python
+  run:
+    - python
+
+about:
+  home: https://github.com/neovim/neovim.git
+  summary: Neovim is a project that seeks to aggressively refactor Vim.

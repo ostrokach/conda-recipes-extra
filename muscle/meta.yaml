@@ -1,0 +1,21 @@
+package:
+  name: muscle
+  version: "3.8.425"
+
+source:
+  fn: muscle3.8.425_binaries.tar.gz
+  url: http://drive5.com/muscle/muscle3.8.425_binaries.tar.gz
+
+build:
+  number: 1
+
+test:
+  requires: 
+    - muscle
+  commands:
+    - muscle
+
+about:
+  home: http://drive5.com/muscle/
+  license: Public domain
+  summary: MUSCLE is one of the best-performing multiple alignment programs according to published benchmark tests, with accuracy and speed that are consistently better than CLUSTALW. 

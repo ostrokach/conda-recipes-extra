@@ -1,0 +1,22 @@
+package:
+  name: parallel
+  version: 20150522
+
+source:
+  url: http://gnu.mirror.vexxhost.com/parallel/parallel-20150522.tar.bz2
+  fn: parallel-20150522.tar.bz2
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - system
+    - gcc
+  run:
+    - system
+
+about:
+  home: http://www.gnu.org/software/parallel/
+  license: GNU
+  summary: GNU parallel is a shell tool for executing jobs in parallel using one or more computers.

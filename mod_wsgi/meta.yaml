@@ -1,0 +1,69 @@
+package:
+  name: mod_wsgi
+  version: "4.4.13"
+
+source:
+  fn: mod_wsgi-4.4.13.tar.gz
+  url: https://pypi.python.org/packages/source/m/mod_wsgi/mod_wsgi-4.4.13.tar.gz
+  md5: 01622db6b85ec80f1e89e689b938c63c
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  number: 1  
+  # noarch_python: True
+  # preserve_egg_dir: True
+  entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - mod_wsgi = mod_wsgi:main
+    #
+    # Would create an entry point called mod_wsgi that calls mod_wsgi.main()
+
+    - mod_wsgi-express = mod_wsgi.server:main
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - mod_wsgi
+    - mod_wsgi.docs
+    - mod_wsgi.images
+    - mod_wsgi.server
+    - mod_wsgi.server.management
+    - mod_wsgi.server.management.commands
+
+  commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+    - which mod_wsgi-express
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://www.modwsgi.org/
+  license: Apache Software License
+  summary: 'Installer for Apache/mod_wsgi.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

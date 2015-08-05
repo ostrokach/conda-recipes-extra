@@ -1,0 +1,23 @@
+package:
+  name: unionfs-fuse
+  version: "1.0"
+
+source:
+  git_url: https://github.com/rpodgorny/unionfs-fuse.git
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - system
+    - fuse
+  run:
+    - system
+    - fuse
+
+about:
+  home: https://github.com/rpodgorny/unionfs-fuse
+  license: BSD
+  summary: Unionfs filesystem implementation which is way more flexible than the current in-kernel unionfs solution.
+           (Compiled on CentOS 6.5).

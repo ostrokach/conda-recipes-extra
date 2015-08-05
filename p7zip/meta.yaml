@@ -1,0 +1,20 @@
+package:
+  name: p7zip
+  version: "9.38.1"
+
+source:
+  fn: p7zip_9.38.1_x86_linux_bin.tar.bz2
+  url: http://softlayer-dal.dl.sourceforge.net/project/p7zip/p7zip/9.38.1/p7zip_9.38.1_src_all.tar.bz2
+
+requirements:
+  build:
+    - system
+    - gcc
+    
+  run:
+    - system
+
+about:
+  home: http://sourceforge.net/projects/p7zip/
+  summary: p7zip is a quick port of 7z.exe and 7za.exe (command line version of 7zip, see www.7-zip.org ) for Unix.
+

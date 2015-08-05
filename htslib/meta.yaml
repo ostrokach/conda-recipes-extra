@@ -1,0 +1,21 @@
+package:
+  name: htslib
+  version: "1.2.1"
+
+source:
+  fn: htslib-1.2.1.tar.bz2
+  url: https://github.com/samtools/htslib/releases/download/1.2.1/htslib-1.2.1.tar.bz2
+
+build:
+  number: 1
+  
+requirements:
+  build:
+    - system
+    - gcc
+  run:
+    - system
+
+about:
+  home: https://github.com/samtools/htslib
+  summary: C library for high-throughput sequencing data formats.

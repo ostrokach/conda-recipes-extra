@@ -1,0 +1,22 @@
+package:
+  name: sphinx_rtd_theme
+  version: "0.1.8"
+
+source:
+  git_url: https://github.com/snide/sphinx_rtd_theme.git
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+    - sphinx
+
+  run:
+    - python
+    - sphinx 
+
+about:
+  license: Apache License 2.0
+  summary: 'Read the Docs Sphinx Theme'

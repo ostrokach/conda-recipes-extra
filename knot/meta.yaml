@@ -10,7 +10,7 @@ source:
 
 
 build:
-  number: 1
+  number: 2
 
 
 requirements:
@@ -25,7 +25,7 @@ test:
     - knot
 
   commands:
-    - which topol
+    - which knot
 
 
 about:

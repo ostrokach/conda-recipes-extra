@@ -1,9 +1,13 @@
 #!/bin/bash
 
 # Credit goes here: https://github.com/menpo/conda-boost
+echo $PREFIX
+echo $LIBRARY_PATH
+echo $RECIPE_DIR
 
 # Because using custom GCC
 export CFLAGS="-I$PREFIX/include"
+export CPPFLAGS="-I$PREFIX/include"
 export LDFLAGS="-L$PREFIX/lib"
 
 # I want to set the Python options myself in the user-config.jam
@@ -26,7 +30,7 @@ python_root=`python -c "import sys; print(sys.prefix)"`
 if [ `uname` == Darwin ]; then
   CXXFLAGS="-mmacosx-version-min=${MACOSX_DEPLOYMENT_TARGET}"
   LINKFLAGS="-mmacosx-version-min=${MACOSX_DEPLOYMENT_TARGET}"
-
+  
   # Need to default to clang over g++ (though in later version g++ is clang)
   B2ARGS="toolset=clang"
   
@@ -37,6 +41,7 @@ if [ `uname` == Darwin ]; then
   
   CXXFLAGS="cxxflags=${CXXFLAGS}"
   LINKFLAGS="linkflags=${LINKFLAGS}"
+  
 else
   CXXFLAGS=""
   LINKFLAGS=""
@@ -47,14 +52,13 @@ fi
 # We explicitly set to use conda's BZIP2, ZLIB, and ICU
 # We make sure that we build the appropriate ARCH and set the CXX flags appropriately
 # Use "--layout=versioned --build-type=complete " to build both static and shared libraries
-
 ./bjam \
-    --debug-configuration --user-config="${RECIPE_DIR}/user-config.jam" \
-    -sBZIP2_LIBPATH="${LIBRARY_PATH}" -sBZIP2_INCLUDE="${INCLUDE_PATH}" \
-    -sZLIB_LIBPATH="${LIBRARY_PATH}" -sZLIB_INCLUDE="${INCLUDE_PATH}" \
-    -sICU_PATH="${LIBRARY_PATH}" -sICU_LINK="${INCLUDE_PATH}" \
+    --debug-configuration --user-config="$RECIPE_DIR/user-config.jam" \
+    -sBZIP2_LIBPATH="$INCLUDE_PATH" -sBZIP2_INCLUDE="$INCLUDE_PATH" \
+    -sZLIB_LIBPATH="$INCLUDE_PATH" -sZLIB_INCLUDE="$INCLUDE_PATH" \
+    -sICU_PATH="$INCLUDE_PATH" -sICU_LINK="$INCLUDE_PATH" \
     address-model=${ARCH} architecture=x86 ${CXXFLAGS} \
-    link=shared ${LINKFLAGS} ${B2ARGS} stage
+    link=shared variant=release ${LINKFLAGS} ${B2ARGS} stage
 
 # Copy the files across
 cp -a stage/lib "$PREFIX"

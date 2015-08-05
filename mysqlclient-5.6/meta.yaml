@@ -1,0 +1,35 @@
+package:
+  name: mysqlclient
+  version: "1.3.6"
+
+source:
+  git_url: https://github.com/PyMySQL/mysqlclient-python.git
+
+build:
+  number: 6
+
+requirements:
+  build:
+    - gcc
+    - python
+    - setuptools
+    - zlib
+    - openssl
+    - mysql ==5.6.24
+  run:
+    - python
+    - zlib
+    - openssl
+
+test:
+  requires:
+    - mysql ==5.6.24
+    - mysqlclient
+  imports:
+    - MySQLdb
+    - _mysql
+
+about:
+  home: https://github.com/PyMySQL/mysqlclient-python
+  license: GNU General Public License (GPL)
+  summary: 'Python interface to MySQL'
