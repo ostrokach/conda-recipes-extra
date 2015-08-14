@@ -1,8 +1,11 @@
 #!/bin/bash
 
-cp /home/kimlab1/strokach/programs/archives/gmp-6.0.0a.tar.bz2 .
-tar xjvf gmp*
-cd gmp*
+export CFLAGS="-I$PREFIX/include"
+export CPPFLAGS="-I$PREFIX/include"
+export LDFLAGS="-L$PREFIX/lib"
+
 ./configure --prefix=$PREFIX
 make
+make check
 make install
+

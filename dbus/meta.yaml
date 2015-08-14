@@ -1,0 +1,29 @@
+package:
+  name: dbus
+  version: "1.8.20"
+
+source:
+  url: http://dbus.freedesktop.org/releases/dbus/dbus-1.8.20.tar.gz 
+  md5: b49890bbabedab3a1c3f4f73c7ff8b2b
+  fn: dbus-1.8.20.tar.gz
+
+build:
+  number: 1
+
+requirements:
+  build:
+    # - gcc
+    - python ==2.7.10
+    - m4
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - system
+    - glib
+    - expat
+  run:
+    - system
+    - glib
+    - expat
+

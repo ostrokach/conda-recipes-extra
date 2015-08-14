@@ -1,0 +1,41 @@
+package:
+  name: at-spi2-atk
+  version: "2.16.0"
+
+source:
+  url: http://ftp.gnome.org/pub/gnome/sources/at-spi2-atk/2.16/at-spi2-atk-2.16.0.tar.xz 
+  md5: 8936488c8cdce0e158f80b2e247527f9 
+  fn: at-spi2-atk-2.16.0.tar.xz
+
+build:
+  number: 1
+
+requirements:
+  build:
+    # - gcc
+    - python ==2.7.10
+    - m4
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - system
+    - glib
+    - gobject-introspection
+    - atk
+    - dbus
+    - dbus-glib
+    - at-spi2-core
+  run:
+    - system
+    - glib
+    - gobject-introspection
+    - atk
+    - dbus
+    - dbus-glib
+    - at-spi2-core
+
+about:
+  home: http://www.linuxfromscratch.org/blfs/view/svn/x/atk.html
+  summary: "ATK provides the set of accessibility interfaces that are implemented by other toolkits and applications. Using the ATK interfaces, accessibility tools have full access to view and control running applications."
+

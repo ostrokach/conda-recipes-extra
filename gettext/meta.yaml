@@ -1,17 +1,20 @@
 package:
   name: gettext
-  version: 0.19.4
+  version: 0.19.5
 
 source:
-  fn: gettext-0.19.4.tar.gz
-  url: http://ftp.gnu.org/pub/gnu/gettext/gettext-0.19.4.tar.gz
+  url: http://ftp.gnu.org/pub/gnu/gettext/gettext-0.19.5.1.tar.gz 
+  fn: gettext-0.19.5.1.tar.gz
 
+build: 
+  number: 2
+ 
 requirements:
   build:
     - gcc
-    
+    - system
   run:
-    - libgcc
-  
+    - system
+ 
 about:
   license: GNU

@@ -1,0 +1,34 @@
+package:
+  name: libdrm
+  version: "2.4.62"
+
+source:
+  url: http://dri.freedesktop.org/libdrm/libdrm-2.4.62.tar.gz 
+  md5: e94fd03ad36b4154b8e10e8f6854f863 
+  fn: libdrm-2.4.62.tar.gz
+  patches:
+    - drm.patch
+
+build:
+  number: 1
+ 
+requirements:
+  build:
+      #- gcc
+    - m4
+    - automake
+    - autoconf
+    - libtool
+    - pkg-config
+    - system
+      #- mm-common
+    - pthread-stubs
+  run:
+    - system
+      #- mm-common
+    - pthread-stubs
+
+about:
+  home: https://01.org/linuxgraphics/community/libdrm 
+  license: GPL
+  summary: "LIBDRM is the cross-driver middleware which allows user-space applications (such as Mesa and 2D drivers) to communicate with the Kernel by the means of the DRI protocol."

@@ -3,8 +3,8 @@ package:
   version: "3.2.3"
 
 source:
+  url: http://www.cmake.org/files/v3.2/cmake-3.2.3.tar.gz 
   fn: cmake-3.2.3.tar.gz
-  url: http://www.cmake.org/files/v3.2/cmake-3.2.3.tar.gz
 
 build:
   number: 1
@@ -13,14 +13,19 @@ requirements:
   build:
     - system
     - gcc
-    - libtool
+    - m4
     - autoconf
     - automake
+    - libtool
     - pkg-config
     - python
   run:
+    - system
     - python
 
 about:
-  home: https://github.com/neovim/neovim.git
-  summary: Neovim is a project that seeks to aggressively refactor Vim.
+  home: http://www.cmake.org/ 
+  summary: "CMake is a family of tools designed to build, test and package software. 
+    CMake is used to control the software compilation process using simple platform 
+    and compiler independent configuration files. CMake generates native makefiles 
+    and workspaces that can be used in the compiler environment of your choice."

@@ -1,21 +1,23 @@
 package:
   name: autoconf
-  version: "dev"
+  version: "2.69"
 
 source:
-  git_url: git://git.sv.gnu.org/autoconf
+  url: http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz 
+  fn: autoconf-2.69.tar.gz
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
     - system
     - gcc
+    - m4
   run:
     - system
 
 about:
   home: http://www.gnu.org/software/autoconf/autoconf.html 
   license: GNU
-  summary: Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages. 
+  summary: "Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages." 

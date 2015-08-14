@@ -1,0 +1,33 @@
+package:
+  name: atk
+  version: "2.16.0"
+
+source:
+  url: http://ftp.gnome.org/pub/gnome/sources/atk/2.16/atk-2.16.0.tar.xz 
+  md5: c7c5002bd6e58b4723a165f1bf312116
+  fn: atk-2.16.0.tar.xz
+
+build:
+  number: 2
+
+requirements:
+  build:
+    - system
+    - m4
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - gcc
+    - glib
+    - gobject-introspection
+    - python ==2.7.10
+  run:
+    - system
+    - glib
+    - gobject-introspection
+ 
+about:
+  home: http://www.linuxfromscratch.org/blfs/view/svn/x/atk.html
+  summary: "ATK provides the set of accessibility interfaces that are implemented by other toolkits and applications. Using the ATK interfaces, accessibility tools have full access to view and control running applications."
+

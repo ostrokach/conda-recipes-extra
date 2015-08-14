@@ -1,0 +1,33 @@
+package:
+  name: libgsf
+  version: "1.14.34"
+
+source:
+  url: http://ftp.gnome.org/pub/gnome/sources/libgsf/1.14/libgsf-1.14.34.tar.xz
+  md5: 146c9063296b92803c1721b7bdc23488 
+  fn: libgsf-1.14.34.tar.xz
+
+build:
+  number: 1
+
+requirements:
+  build:
+    # - gcc
+    - python ==2.7.10
+    - m4
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - system
+    - glib
+    - libxml2
+    - gdk-pixbuf
+    - gobject-introspection
+  run:
+    - system
+    - glib
+    - libxml2
+    - gdk-pixbuf
+    - gobject-introspection
+

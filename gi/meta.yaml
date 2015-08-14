@@ -1,0 +1,27 @@
+package:
+  name: gi
+  version: "0.10.8"
+
+source:
+  url: http://ftp.gnome.org/pub/GNOME/sources/gobject-introspection/0.10/gobject-introspection-0.10.8.tar.gz 
+  fn: gobject-introspection-0.10.8.tar.gz
+
+requirements:
+  build:
+    - autoconf
+    - automake
+    - pkg-config
+    - gcc
+    - flex
+    - bison
+    - cairo
+  run:
+    - flex
+    - bison
+    - cairo
+ 
+about:
+  home: http://ftp.gnome.org/pub/GNOME/sources/gobject-introspection/0.10/?C=M;O=D
+  license: Free Software 
+  summary: "The goal of the project is to describe the APIs and  collect them in
+      a uniform, machine readable format."

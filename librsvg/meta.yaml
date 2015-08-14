@@ -1,0 +1,46 @@
+package:
+  name: librsvg
+  version: "2.40.10"
+
+source:
+  url: https://download.gnome.org/sources/librsvg/2.40/librsvg-2.40.10.tar.xz 
+  fn: librsvg-2.40.10.tar.xz
+
+build:
+  number: 3 
+
+requirements:
+  build:
+    - python ==2.7.10
+    - m4
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - system
+    - glib
+    - cairo
+    - libxml2
+    - libpng
+    - libcroco
+    - gdk-pixbuf
+    - pango
+    - gobject-introspection
+    - gettext
+    - pixman
+    - libgsf
+    - gtk
+  run:
+    - system
+    - glib
+    - cairo
+    - libxml2
+    - libpng
+    - libcroco
+    - gdk-pixbuf
+    - pango
+    - gobject-introspection
+    - gettext
+    - pixman
+    - libgsf
+    - gtk

@@ -1,0 +1,25 @@
+package:
+  name: gnome-common 
+  version: "3.14.0"
+
+source:
+  url: http://ftp.gnome.org/pub/GNOME/sources/gnome-common/3.14/gnome-common-3.14.0.tar.xz
+  fn: gnome-common-3.14.0.tar.xz 
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - system
+    - m4
+    - autoconf
+    - automake
+    - pkg-config
+    - libtool
+  run:
+    - system
+
+about:
+  home: http://ftp.gnome.org/pub/GNOME/sources/gnome-common/ 
+

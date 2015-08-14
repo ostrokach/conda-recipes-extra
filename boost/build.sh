@@ -1,9 +1,6 @@
 #!/bin/bash
 
 # Credit goes here: https://github.com/menpo/conda-boost
-echo $PREFIX
-echo $LIBRARY_PATH
-echo $RECIPE_DIR
 
 # Because using custom GCC
 export CFLAGS="-I$PREFIX/include"
@@ -24,7 +21,8 @@ chmod -R 777 .*
 # Setup the boost building, this is fairly simple.
 python_root=`python -c "import sys; print(sys.prefix)"`
 # --with-python-root=$python_root
-./bootstrap.sh --prefix="${PREFIX}" --libdir="${LIBRARY_PATH}" --without-libraries=python
+# --without-libraries=python
+./bootstrap.sh --prefix="$PREFIX" --libdir="$PREFIX/include" --without-libraries=python
 
 # We need a host of options to get things to work on OSX
 if [ `uname` == Darwin ]; then
@@ -52,14 +50,15 @@ fi
 # We explicitly set to use conda's BZIP2, ZLIB, and ICU
 # We make sure that we build the appropriate ARCH and set the CXX flags appropriately
 # Use "--layout=versioned --build-type=complete " to build both static and shared libraries
-./bjam \
+#./bjam 
+./b2 \
     --debug-configuration --user-config="$RECIPE_DIR/user-config.jam" \
-    -sBZIP2_LIBPATH="$INCLUDE_PATH" -sBZIP2_INCLUDE="$INCLUDE_PATH" \
-    -sZLIB_LIBPATH="$INCLUDE_PATH" -sZLIB_INCLUDE="$INCLUDE_PATH" \
-    -sICU_PATH="$INCLUDE_PATH" -sICU_LINK="$INCLUDE_PATH" \
+    -sBZIP2_LIBPATH="$PREFIX/include" -sBZIP2_INCLUDE="$PREFIX/include" \
+    -sZLIB_LIBPATH="$PREFIX/include" -sZLIB_INCLUDE="$PREFIX/include" \
+    -sICU_PATH="$PREFIX/include" -sICU_LINK="$PREFIX/include" \
     address-model=${ARCH} architecture=x86 ${CXXFLAGS} \
     link=shared variant=release ${LINKFLAGS} ${B2ARGS} stage
 
 # Copy the files across
 cp -a stage/lib "$PREFIX"
-cp -R boost "${INCLUDE_PATH}"
+cp -R boost "$PREFIX/include"

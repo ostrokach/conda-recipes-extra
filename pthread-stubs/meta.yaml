@@ -14,11 +14,7 @@ requirements:
     - pkg-config
     - util-macros
     - m4
-
   run:
-    - libgcc
-    - util-macros
-    - m4
 
 about:
   home: 'http://cgit.freedesktop.org/xcb/pthread-stubs/'

@@ -1,0 +1,36 @@
+package:
+  name: pixman 
+  version: "0.32.6"
+
+source:
+  url: http://cairographics.org/releases/pixman-0.32.6.tar.gz 
+  fn: pixman-0.32.6.tar.gz
+
+build:
+  number: 4
+  rpaths:
+    - lib
+    - lib64
+
+requirements:
+  build:
+    - m4
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - gcc
+    - libpng
+    - zlib
+  run:
+    - libpng
+    - zlib
+
+about:
+  home: http://www.pixman.org/ 
+  license: LGPL
+  summary: "Pixman is a low-level software library for pixel 
+    manipulation, providing features such as image compositing 
+    and trapezoid rasterization. Important users of pixman are 
+    the cairo graphics library and the X server."
+

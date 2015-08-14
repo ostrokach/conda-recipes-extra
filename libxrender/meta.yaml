@@ -5,25 +5,25 @@ package:
 source:
   git_url: http://anongit.freedesktop.org/git/xorg/lib/libXrender.git
 
+build:
+  number: 2
+
 requirements:
   build:
     - gcc
+    - m4
     - autoconf
     - automake
     - libtool
     - pkg-config
     - util-macros
-    - m4
-    - python
     - libx11
     - renderproto
-
   run:
-    - libgcc
-    - util-macros
-    - m4
     - libx11
     - renderproto
 
 about:
   home: 'http://cgit.freedesktop.org/xorg/lib/libXrender/'
+  license:
+  summary: 

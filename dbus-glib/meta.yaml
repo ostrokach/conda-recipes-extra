@@ -1,0 +1,31 @@
+package:
+  name: dbus-glib
+  version: "0.104"
+
+source:
+  url: http://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.104.tar.gz 
+  md5: 5497d2070709cf796f1878c75a72a039 
+  fn: dbus-glib-0.104.tar.gz 
+
+build:
+  number: 1
+
+requirements:
+  build:
+    # - gcc
+    - python ==2.7.10
+    - m4
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - system
+    - dbus
+    - glib
+    - expat
+  run:
+    - system
+    - dbus
+    - glib
+    - expat
+

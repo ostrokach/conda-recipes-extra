@@ -1,12 +1,26 @@
 package:
   name: gmp
-  version: "6.0.0"
+  version: "6.0.0a"
+
+source:
+  url: https://gmplib.org/download/gmp/gmp-6.0.0a.tar.xz 
+  fn: gmp-6.0.0a.tar.xz
+
+build:
+  number: 1
 
 requirements:
   build:
-    
+    - system
+    - m4
+    - autoconf
+    - automake
+    - pkg-config
+    - libtool
   run:
+    - system
 
 about:
   home: 'https://gmplib.org/'
+  license: "GNU"
   summary: 'The GNU Multiple Precision Arithmetic Library'

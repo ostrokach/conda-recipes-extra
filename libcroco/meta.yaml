@@ -1,0 +1,28 @@
+package:
+  name: libcroco
+  version: "0.6.8"
+
+source:
+  url: http://ftp.gnome.org/pub/gnome/sources/libcroco/0.6/libcroco-0.6.8.tar.xz  
+  md5: 767e73c4174f75b99695d4530fd9bb80
+  fn: libcroco-0.6.8.tar.xz
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - system
+    - m4
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - system
+    - glib
+    - libxml2
+  run:
+    - system
+    - glib
+    - libxml2
+

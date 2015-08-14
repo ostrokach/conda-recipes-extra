@@ -1,0 +1,35 @@
+package:
+  name: pycairo
+  version: "1.10.0"
+
+source:
+  git_url: git://git.cairographics.org/git/pycairo
+  git_tag: master
+  # fn: pycairo-1.10.0.tar.bz2
+  # url: http://cairographics.org/releases/pycairo-1.10.0.tar.bz2
+
+build:
+  number: 4
+
+requirements:
+  build:
+    - python
+    - gi
+    - gcc
+  run:
+    - python
+    - gi
+
+test:
+  imports: 
+    - gi
+    - gi.repository
+
+about:
+  home: http://ftp.gnome.org/pub/GNOME/sources/pygobject/2.28/?C=M;O=D
+  license: Free Software
+  summary: "This archive contains bindings for the GLib, GObject and GIO,
+      to be used in Python. It is a fairly complete set of bindings,
+      it's already rather useful, and is usable to write moderately
+      complex programs.  (see the examples directory for some examples
+      of the simpler programs you could write)."

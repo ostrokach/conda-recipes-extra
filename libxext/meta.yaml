@@ -5,24 +5,24 @@ package:
 source:
   git_url: http://anongit.freedesktop.org/git/xorg/lib/libXext.git
 
+build:
+  number: 1
+ 
 requirements:
   build:
+    - system
     - gcc
+    - m4
     - autoconf
     - automake
     - libtool
     - pkg-config
     - util-macros
-    - m4
     - python
     - xproto
     - libx11
     - xextproto
-
   run:
-    - libgcc
-    - util-macros
-    - m4
     - xproto
     - libx11
     - xextproto

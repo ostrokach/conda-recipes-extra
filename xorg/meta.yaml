@@ -1,0 +1,36 @@
+package:
+  name: xorg
+  version: "dev"
+
+requirements:
+  build:
+    - gcc
+    - m4
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - util-macros
+    - ncurses
+    - gettext
+    - llvm
+    - zlib
+    - fontconfig
+    - freetype      
+    - libxml2
+    - python
+    - bison
+    - cryptography
+  run:
+    - ncurses
+    - gettext
+    - llvm
+    - zlib
+    - fontconfig
+    - freetype
+    - libxml2
+    - bison
+    - cryptography
+
+about:
+  home: 'http://cgit.freedesktop.org/xorg/lib/libX11/'

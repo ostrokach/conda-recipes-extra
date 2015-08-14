@@ -5,6 +5,8 @@ package:
 source:
   git_url: http://anongit.freedesktop.org/git/xcb/proto.git
 
+build:
+  number: 1
 
 requirements:
   build:
@@ -16,12 +18,10 @@ requirements:
     - util-macros
     - m4
     - python
-
   run:
-    - libgcc
-    - util-macros
-    - m4
+    - system
     - python
 
 about:
   home: 'http://cgit.freedesktop.org/xcb/proto/'
+

@@ -1,0 +1,27 @@
+package:
+  name: bison
+  version: "3.0.4"
+
+source:
+  url: http://ftp.gnu.org/gnu/bison/bison-3.0.4.tar.gz
+  fn: bison-3.0.4.tar.gz
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - system
+    - gcc
+    - m4
+    - autoconf
+    - automake
+    - pkg-config
+    - libtool
+  run:
+    - system
+
+about:
+  home: http://www.gnu.org/software/bison/
+  license: GNU
+  summary: "Bison is a general-purpose parser generator that converts an annotated context-free grammar into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables."

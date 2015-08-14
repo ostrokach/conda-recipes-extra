@@ -1,0 +1,22 @@
+package:
+  name: pygtk 
+  version: "2.24.0"
+
+source:
+  url: http://ftp.gnome.org/pub/GNOME/sources/pygtk/2.24/pygtk-2.24.0.tar.gz 
+  fn: pycairo-1.10.0.tar.bz2
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+    - gcc
+  run:
+    - python
+
+about:
+  home: http://www.pygtk.org/ 
+  license: Free Software
+  summary: "PyGTK lets you to easily create programs with a graphical user interface using the Python programming language."

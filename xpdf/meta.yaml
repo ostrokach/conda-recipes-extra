@@ -1,0 +1,22 @@
+package:
+  name: xpdf
+  version: "3.04"
+
+source:
+  url: ftp://ftp.foolabs.com/pub/xpdf/xpdfbin-linux-3.04.tar.gz 
+  fn: pdfbin-linux-3.04.tar.gz
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - gcc
+  run:
+
+about:
+  home: http://www.foolabs.com/xpdf/ 
+  license: GPL
+  summary: "Xpdf is an open source viewer for Portable Document Format (PDF) files."
+
+

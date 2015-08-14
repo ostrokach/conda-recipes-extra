@@ -8,9 +8,12 @@ source:
 requirements:
   build:
     - gcc
+    - m4
     - autoconf
     - automake
-
+    - libtool
+    - pkgconfig
+    - system
   run:
-    - libgcc
+    - system
 

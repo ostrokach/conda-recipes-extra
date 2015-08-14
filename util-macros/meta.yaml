@@ -5,6 +5,9 @@ package:
 source:
   git_url: http://anongit.freedesktop.org/git/xorg/util/macros.git
 
+build:
+  number: 1
+
 requirements:
   build:
     - gcc
@@ -13,11 +16,9 @@ requirements:
     - libtool
     - pkg-config
     - m4
-    - python
-
+    - system
   run:
-    - libgcc
-    - m4
+    - system
 
 about:
   home: 'http://cgit.freedesktop.org/xorg/util/macros/'

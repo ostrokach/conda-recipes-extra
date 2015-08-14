@@ -1,0 +1,30 @@
+package:
+  name: libsigcpp
+  version: "2.4.1"
+
+source:
+  url: http://ftp.gnome.org/pub/GNOME/sources/libsigc++/2.4/libsigc++-2.4.1.tar.xz 
+  md5: 55945ba6e1652f89999e910f6b52047c
+  fn: libsigc++-2.4.1.tar.xz
+
+build:
+  number: 2
+ 
+requirements:
+  build:
+    - m4
+    - automake
+    - autoconf
+    - libtool
+    - pkg-config
+    - gcc
+    - system
+      #- mm-common
+  run:
+    - system
+      #- mm-common
+
+about:
+  home: libsigc.sourceforge.net
+  license: GPL
+  summary: "libsigc++ implements a typesafe callback system for standard C++."

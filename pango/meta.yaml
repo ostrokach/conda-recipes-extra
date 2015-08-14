@@ -1,0 +1,42 @@
+package:
+  name: pango
+  version: "1.36.8"
+
+source:
+  url: http://ftp.gnome.org/pub/gnome/sources/pango/1.36/pango-1.36.8.tar.xz 
+  md5: 217a9a753006275215fa9fa127760ece
+  fn: pango-1.36.8.tar.xz
+
+build:
+  number: 2
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - system
+    - m4
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    # - gcc
+    - python ==2.7.10
+    - glib
+    - gobject-introspection
+    - libffi
+    - cairo
+    - harfbuzz
+    - freetype
+  run:
+    - system
+    - glib
+    - gobject-introspection
+    - libffi
+    - cairo
+    - harfbuzz
+    - freetype
+
+about:
+  home: http://www.pango.org 
+  summary: "Pango is a library for laying out and rendering of text, with an emphasis on internationalization. Pango can be used anywhere that text layout is needed, though most of the work on Pango so far has been done in the context of the GTK+ widget toolkit. Pango forms the core of text and font handling for GTK+-2.x."
+

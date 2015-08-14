@@ -1,0 +1,53 @@
+package:
+  name: pygobject
+  version: "3.17.1"
+
+source:
+  url: http://ftp.gnome.org/pub/GNOME/sources/pygobject/3.17/pygobject-3.17.1.tar.xz 
+  fn: pygobject-3.17.1.tar.xz
+
+build:
+  number: 2
+
+requirements:
+  build:
+      #- gcc
+    - m4
+    - autoconf
+    - automake
+    - pkg-config
+    - libtool
+    - python
+    - gnome-common
+    - glib >=2.43 # [not win]
+    - gobject-introspection
+    - gettext
+    - cairo
+    - pycairo
+    - libsigcpp
+    - gtk
+  run:
+    - python
+    - gnome-common
+    - glib >=2.43 # [not win]
+    - gobject-introspection 
+    - gettext
+    - cairo
+    - pycairo
+    - libsigcpp
+    - gtk
+ 
+test:
+  imports:
+    - gi
+    - gi.repository
+    - gi.repository.GObject
+    - gi.repository.GLib
+    - gi.repository.Gio
+    - gi.repository.Gtk
+
+about:
+  home: https://wiki.gnome.org/Projects/PyGObject 
+  license: LGPL 2.1
+  summary: 'PyGObject is a Python extension module that gives clean and consistent access to the entire GNOME software platform through the use of GObject Introspection.'
+

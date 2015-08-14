@@ -1,0 +1,38 @@
+package:
+  name: glib
+  version: "2.44.1"
+
+source:
+  url: http://ftp.gnome.org/pub/gnome/sources/glib/2.44/glib-2.44.1.tar.xz 
+  fn: glib-2.44.1.tar.xz
+
+build:
+  number: 1
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - system
+    - m4
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - gcc
+    - python 
+    - libffi >=3.0.0
+    - gettext
+    - zlib
+    - libsigcpp >=2.5.1
+  run:
+    - system
+    - libffi >=3.0.0
+    - gettext
+    - zlib
+    - libsigcpp >=2.5.1
+    
+about:
+  home: https://developer.gnome.org/glib/ 
+  license: LGPL
+  summary: "GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures."
+

@@ -1,0 +1,31 @@
+package:
+  name: gtk-doc
+  version: "1.24"
+
+source:
+  url: https://download.gnome.org/sources/gtk-doc/1.24/gtk-doc-1.24.tar.xz 
+  fn: gtk-doc-1.24.tar.xz
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - system
+    - m4
+    - autoconf
+    - automake
+    - pkg-config
+    - libtool
+    - gcc
+    - python
+    - libxslt
+    - libxml2
+  run:
+    - system
+    - libxslt
+    - libxml2
+
+about:
+  home: http://www.gtk.org/gtk-doc 
+
