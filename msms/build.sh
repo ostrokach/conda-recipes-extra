@@ -11,8 +11,8 @@ mkdir -p "$PREFIX/lib/msms"
 sed -i "s|numfile = \"./atmtypenumbers\"|numfile = \"$PREFIX/lib/msms/atmtypenumbers\"|" pdb_to_xyzr
 sed -i "s|numfile = \"./atmtypenumbers\"|numfile = \"$PREFIX/lib/msms/atmtypenumbers\"|" pdb_to_xyzrn
 
-# Change `nawk` to `gawk`, since `nawk` is not installed on some platforms
-sed -i 's|nawk|gawk|g' pdb_to_xyzrn
+# Change `nawk` to `awk`, since `nawk` is not installed on some platforms
+sed -i 's|nawk|awk|g' pdb_to_xyzrn
 
 # Patch pdb_to_xyzrn so that includes the chain
 sed -i 's|resnum=substr($0,23,4);|resnum=substr($0,23,4);\n\tchain=substr($0,21,2);|' pdb_to_xyzrn
