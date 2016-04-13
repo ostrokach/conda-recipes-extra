@@ -1,17 +1,19 @@
 package:
   name: pygobject
-  version: "3.17.1"
+  version: "3.18.2"
 
 source:
-  url: http://ftp.gnome.org/pub/GNOME/sources/pygobject/3.17/pygobject-3.17.1.tar.xz 
-  fn: pygobject-3.17.1.tar.xz
+  fn: pygobject-3.18.2.tar.xz 
+  url: http://ftp.gnome.org/pub/GNOME/sources/pygobject/3.18/pygobject-3.18.2.tar.xz 
+  sha256: 2a3cad1517916b74e131e6002c3824361aee0671ffb0d55ded119477fc1c2c5f
 
 build:
-  number: 2
+  number: 0
+  detect_binary_files_with_prefix: true
 
 requirements:
   build:
-      #- gcc
+    - gcc
     - m4
     - autoconf
     - automake
@@ -19,24 +21,35 @@ requirements:
     - libtool
     - python
     - gnome-common
-    - glib >=2.43 # [not win]
+    - glib >=2.43
     - gobject-introspection
     - gettext
     - cairo
+    - cairo-gobject
     - pycairo
     - libsigcpp
     - gtk
+    - pango
+    - libffi
+    # Org.X
+    #- libxrender
   run:
+    - libgcc
     - python
     - gnome-common
-    - glib >=2.43 # [not win]
+    - glib >=2.43
     - gobject-introspection 
     - gettext
     - cairo
+    - cairo-gobject
     - pycairo
     - libsigcpp
     - gtk
- 
+    - pango
+    - libffi
+    # Org.X
+    #- libxrender
+
 test:
   imports:
     - gi

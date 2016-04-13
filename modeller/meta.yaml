@@ -1,30 +1,27 @@
 package:
-    name: modeller
-    version: 9.14
+  name: modeller
+  version: 9.14
 
 source:
   fn: modeller-9.14.tar.gz
   url: https://salilab.org/modeller/9.14/modeller-9.14.tar.gz
 
 build:
-    number: 2
+  number: 3
 
 requirements:
-    build:
-      - python
-
-    run:
-      - python
+  build:
+    - python
+  run:
+    - python
 
 test:
-    requires:
-      - modeller
-
-    imports:
-      - _modeller
-      - modeller
-
+  imports:
+    - _modeller
+    - modeller
+  commands:
+    - python -c 'from modeller import *'
+ 
 about:
-    home: https://salilab.org/modeller/
-    license: Proprietary
-
+  home: https://salilab.org/modeller/
+  license: Proprietary

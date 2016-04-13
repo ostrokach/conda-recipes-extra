@@ -2,23 +2,28 @@ package:
   name: pmw
   version: 2.0.0
 
+source:
+  fn: Pmw-2.0.0.tar.gz
+  url: http://iweb.dl.sourceforge.net/project/pmw/Pmw-2.0.0.tar.gz
+  md5: c7c3f26c4f5abaa99807edefee578fc0
+
 build:
   number: 1
 
 requirements:
-    build:
-      - python
-      - tk
-
-    run:
-      - python
-      - tk
-
-test:
-  requires:
+  build:
     - python
     - tk
-    
+  run:
+    - python
+    - tk
+
+test:
+  imports:
+    - Pmw
+  commands:
+    - python -c "import Pmw; root = Pmw.initialise()"
+
 about:
   home: https://sourceforge.net/projects/pmw/
   license: MIT License

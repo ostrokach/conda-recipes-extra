@@ -1,8 +1,7 @@
 #!/bin/bash
 
-svn checkout svn://svn.code.sf.net/p/pymol/code/trunk pymol-code
-cd $SRC_DIR/pymol-code/pymol
+export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig:$PREFIX/share/pkgconfig"
 
-export CPPFLAGS="-std=c++0x"
 export PREFIX_PATH=$PREFIX
-$PYTHON setup.py build install
+$PYTHON setup.py build 
+$PYTHON setup.py install

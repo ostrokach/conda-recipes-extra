@@ -1,20 +1,24 @@
 package:
   name: doxygen
-  version: 1.8
+  version: 1.8.10
 
 source:
-  git_url: https://github.com/doxygen/doxygen.git
+  git_url: https://github.com/doxygen/doxygen.git 
 
 requirements:
   build:
     - gcc
-    - graphviz
+    - system
+    - m4
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - cmake
     - flex
-
+    - bison 
   run:
-    - libgcc
-    - graphviz
-    - flex
+    - system
 
 about:
   home: 'http://www.stack.nl/~dimitri/doxygen/index.html'

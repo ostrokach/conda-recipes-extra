@@ -1,14 +1,14 @@
 package:
   name: icu
-  version: 55.1
+  version: 56.1
 
 build:
-  number: 1
+  number: 2
  
 source:
-  url: http://download.icu-project.org/files/icu4c/55.1/icu4c-55_1-src.tgz
-  md5: e2d523df79d6cb7855c2fbe284f4db29
-  fn: icu4c-55_1-src.tgz
+  fn: icu4c-56_1-src.tgz
+  url: http://download.icu-project.org/files/icu4c/56.1/icu4c-56_1-src.tgz 
+  md5: c4a2d71ff56aec5ebfab2a3f059be99d
 
 requirements:
   build:
@@ -17,5 +17,6 @@ requirements:
     - libgcc
 
 about:
-    home: http://site.icu-project.org/
-    license: MIT
+  home: http://site.icu-project.org/
+  license: MIT
+

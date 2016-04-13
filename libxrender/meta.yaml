@@ -10,12 +10,12 @@ build:
 
 requirements:
   build:
-    - gcc
     - m4
-    - autoconf
-    - automake
-    - libtool
     - pkg-config
+    - automake
+    - autoconf
+    - libtool
+    - gcc
     - util-macros
     - libx11
     - renderproto

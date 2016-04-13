@@ -26,7 +26,7 @@ fi
 # Simlink modeller libraries so that don't have to alter $LD_LIBRARY_PATH 
 # (there might be a better way to this that I don't know... 
 for i in "$MODELLER_INSTALL_PATH/lib/x86_64-intel8"/*so* ; do 
-    ln -s "$i" "$LIBRARY_PATH"
+    ln -s "$i" "$PREFIX/lib"
 done
 
 
@@ -37,8 +37,6 @@ import os
 import os.path as op
 
 install_dir = op.normpath(op.join(op.dirname(op.abspath(__file__)), '../../../$MODELLER_FOLDER_NAME'))
-license = ''
-if not license:
-    license = os.environ.get('MODELLER_LICENSE', '')
+license = os.environ.get('KEY_MODELLER', '')
 
 EOF

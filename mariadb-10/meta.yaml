@@ -1,0 +1,40 @@
+package:
+  name: mariadb
+  version: "10.1.13"
+
+source:
+  fn: mariadb-10.1.13.tar.gz
+  url: https://github.com/MariaDB/server/archive/mariadb-10.1.13.tar.gz
+  md5: 6d5938ae9aaae7143594a764b2dac986
+
+build:
+  number: 1
+
+requirements:
+  build:
+    # - gcc
+    - cmake
+    - bison
+    - ncurses
+    - zlib
+    - lzo
+    - jemalloc ==3.6.0
+    - aio
+    - readline
+    - openssl
+    - zeromq
+  run:
+    - libgcc
+    - ncurses
+    - zlib
+    - lzo
+    - jemalloc ==3.6.0
+    - aio
+    - readline
+    - openssl
+    - zeromq 
+
+about:
+  home: https://mariadb.org/
+  license: GPL
+

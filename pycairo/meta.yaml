@@ -13,8 +13,6 @@ build:
 
 requirements:
   build:
-    - setuptools
-    - gcc
     - python
     - cairo
   run:

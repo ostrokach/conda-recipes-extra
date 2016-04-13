@@ -8,7 +8,7 @@ source:
   fn: libsigc++-2.4.1.tar.xz
 
 build:
-  number: 2
+  number: 3
  
 requirements:
   build:
@@ -18,11 +18,8 @@ requirements:
     - libtool
     - pkg-config
     - gcc
-    - system
-      #- mm-common
   run:
-    - system
-      #- mm-common
+    - libgcc
 
 about:
   home: libsigc.sourceforge.net

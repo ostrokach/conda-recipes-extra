@@ -7,26 +7,25 @@ source:
   fn: harfbuzz-1.0.1.tar.bz2
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
-    - system
     - m4
     - autoconf
     - automake
     - libtool
     - pkg-config
     - gcc
-    - icu
     - glib
+    - icu 
     - libffi
     - freetype
   run:
-    - system
+    - libgcc
     - glib
+    - icu 
     - libffi
-    - icu
     - freetype
 
 about:

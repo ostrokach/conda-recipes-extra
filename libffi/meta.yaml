@@ -7,7 +7,7 @@ source:
   fn: libffi-3.2.1.tar.gz
 
 build:
-  number: 7 
+  number: 8
   rpaths:
     - lib/
     - lib64/
@@ -22,7 +22,7 @@ requirements:
     - pkg-config
     - gcc
   run:
-    - system
+    - libgcc
     
 about:
   home: https://sourceware.org/libffi/

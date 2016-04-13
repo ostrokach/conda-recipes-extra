@@ -1,35 +1,57 @@
 package:
-    name: pymol
-    version: 1.7.5
+  name: pymol
+  version: 1.8.0
+
+source:
+  fn: pymol-v1.8.0.0-r4144.tar.bz2
+  url: http://iweb.dl.sourceforge.net/project/pymol/pymol/1.8/pymol-v1.8.0.0-r4144.tar.bz2
+  md5: c3be2ef9e7114b2fe2c02524c380b63b
+  patches: 
+    # http://tenet.dl.sourceforge.net/project/pymol/pymol/1.8/pymol-v1.8.0.0-r4145-py3.patch
+    - pymol-v1.8.0.0-r4145-py3.patch
 
 build:
-    number: 1
+  number: 1
 
 requirements:
     build:
+      - m4
+      - autoconf
+      - automake
+      - libtool
+      - pkgconfig
+      - gcc
+      # ...
       - python
+      - numpy
       - libpng
       - freeglut
       - freetype
-      - numpy
+      - glew
       - tk
       - pmw
       - libxml2
-
+      # Had to install these on a new computer to get pymol to work:
+      #- libglew-dev 
+      #- freeglut3-dev
     run:
+      - libgcc
+      # ...
       - python
+      - numpy
       - libpng
       - freeglut
       - freetype
-      - numpy
+      - glew
       - tk
       - pmw
       - libxml2
 
 test:
-    imports:
+  imports:
+    - pymol  
 
 about:
-    home: http://sourceforge.net/projects/pymol/
-    license: Python License (CNRI Python License)
+  home: http://sourceforge.net/projects/pymol/
+  license: Python License (CNRI Python License)
 

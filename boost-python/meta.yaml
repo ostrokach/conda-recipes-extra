@@ -1,17 +1,17 @@
 package:
-    name: boost-python
-    version: 1.58.0
+  name: boost-python
+  version: 1.58.0
 
 source:
-   url: http://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.tar.bz2
-   fn: boost_1_58_0.tar.bz2
+  url: http://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.tar.bz2
+  fn: boost_1_58_0.tar.bz2
+  md5: b8839650e61e9c1c0a89f371dd475546
 
 build:
-    number: 3
+    number: 4
 
 requirements:
     build:
-      - gcc
       - python
       - bzip2
       - zlib
@@ -25,4 +25,4 @@ requirements:
 about:
     home: http://www.boost.org/
     license: Boost License
-    summary: All Boost libraries except for Boost-Python. Both shared and static libraries are included.
+    summary: Boost-Python. Both shared and static libraries are included.

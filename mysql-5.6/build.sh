@@ -1,8 +1,8 @@
 #!/bin/sh
 
 mkdir -p $PREFIX/bin
-mkdir -p $LIBRARY_PATH
-mkdir -p $INCLUDE_PATH
+mkdir -p $PREFIX/lib
+mkdir -p $PREFIX/include
 
 cp -r ./bin $PREFIX
 cp -r ./lib $PREFIX
