@@ -1,27 +1,26 @@
 package:
   name: ncurses
-  version: 5.9
-
+  version: "6.0"
 
 source:
-  fn: ncurses-5.9.tar.gz
-  url: http://ftp.gnu.org/pub/gnu/ncurses/ncurses-5.9.tar.gz
-  md5: 8cb9c412e5f2d96bc6f459aa8c6282a1
-  patches:
+  fn: ncurses-6.0.tar.gz
+  url: ftp://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz 
+  md5: ee13d052e1ead260d7c28071f46eefb1
+  #patches:
     # http://lists.gnu.org/archive/html/bug-ncurses/2011-04/txtkWQqiQvcZe.txt
-    - fix.patch
-
+    #- fix.patch
 
 build:
-  number: 5 # [linux]
+  number: 1 # [linux]
   detect_binary_files_with_prefix: true
-
 
 requirements:
   build:
     - gcc
-
+  run:
+    - libgcc
 
 about:
   home: http://www.gnu.org/software/ncurses/
   license:  Free software (X11 License)
+
