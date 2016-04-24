@@ -1,0 +1,66 @@
+package:
+  name: graph-tool
+  version: "2.14.dev"
+
+source:
+  git_url: https://git.skewed.de/count0/graph-tool.git
+
+build:
+  number: 1 
+  
+requirements:
+  build:
+    - m4
+    - autoconf
+    - automake
+    - pkg-config
+    - libtool
+    - gcc
+    # ...
+    - python
+    - numpy
+    - scipy
+    - boost
+#    - boost-python
+    - cairo
+    - cairomm
+    - pycairo
+    - cgal
+    - sparsehash
+    - freetype
+    - expat
+    - libpng
+    - pygobject
+    - fontconfig
+    - librsvg
+    - bzip2
+  run:
+    - libgcc-5
+    # ...
+    - python
+    - numpy
+    - scipy
+    - boost
+#    - boost-python
+    - cairo
+    - cairomm
+    - pycairo
+    - cgal
+    - sparsehash
+    - freetype
+    - expat
+    - libpng
+    - pygobject 
+    - fontconfig
+    - librsvg
+    - bzip2
+
+test:
+  imports:
+    - graph_tool
+    - graph_tool.all
+
+about:
+  summary: 'Efficient network analysis'
+  license: GPL
+
