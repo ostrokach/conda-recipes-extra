@@ -1,5 +1,5 @@
 package:
-  name: mariadb
+  name: mariadb-server
   version: "10.1.13"
 
 source:
@@ -8,7 +8,8 @@ source:
   md5: 6d5938ae9aaae7143594a764b2dac986
 
 build:
-  number: 1
+  number: 0
+  detect_binary_files_with_prefix: true
 
 requirements:
   build:
@@ -23,9 +24,10 @@ requirements:
     - readline
     - openssl
     - zeromq
+    - libxml2
   run:
     - libgcc
-    - ncurses
+    - ncurses ==5.9
     - zlib
     - lzo
     - jemalloc ==3.6.0
@@ -33,6 +35,7 @@ requirements:
     - readline
     - openssl
     - zeromq 
+    - libxml2
 
 about:
   home: https://mariadb.org/
