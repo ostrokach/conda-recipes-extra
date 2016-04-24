@@ -7,8 +7,10 @@ ln -s $PREFIX/lib $PREFIX/lib64
 export PKG_CONFIG_PATH="$PREFIX/share/pkgconfig:$PREFIX/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig"
 # export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig:$PREFIX/share/pkgconfig"
 export ACLOCAL_FLAGS="-I$PREFIX/share/aclocal"
-export LDFLAGS="-L/usr/lib/gcc/x86_64-linux-gnu/5.3.0 -L$PREFIX/lib"  # -L$STDLIB_DIR"
 export CFLAGS="-I/usr/lib/gcc/x86_64-linux-gnu/5.3.0/include -I$PREFIX/include"
+export CXXFLAGS="-I/usr/lib/gcc/x86_64-linux-gnu/5.3.0/include -I$PREFIX/include"
+export CPPFLAGS="-I/usr/lib/gcc/x86_64-linux-gnu/5.3.0/include -I$PREFIX/include"
+export LDFLAGS="-L/usr/lib/gcc/x86_64-linux-gnu/5.3.0 -L$PREFIX/lib"  # -L$STDLIB_DIR"
 
 export PKG_INSTALLDIR="$PREFIX"
 export CC="gcc-5"

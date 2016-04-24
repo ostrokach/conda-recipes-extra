@@ -1,4 +1,5 @@
 sudo: required
+language: c
 install:
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test --yes
   - sudo apt-get update
