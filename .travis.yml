@@ -1,3 +1,4 @@
+sudo: required
 install:
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test --yes
   - sudo apt-get update
@@ -13,5 +14,5 @@ install:
   - mv -f "$TRAVIS_BUILD_DIR/.condarc" "$HOME/.condarc"
 script:
   - conda info -a
-  - conda build graph-tool-dev
+  - conda build graph-tool
 

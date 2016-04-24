@@ -1,11 +1,10 @@
 package:
   name: graph-tool
-  version: "2.14.dev"
+  version: "2.16"
 
 source:
-  fn: graph-tool-2.14.tar.bz2
-  url: https://downloads.skewed.de/graph-tool/graph-tool-2.14.tar.bz2 
-  md5: 1f21918bdfee8363424062301b482e1f
+  git_url: https://git.skewed.de/count0/graph-tool.git
+  git_rev: release-2.16 
 
 build:
   number: 1 
@@ -17,13 +16,12 @@ requirements:
     - automake
     - pkg-config
     - libtool
-    - gcc
+    # - gcc
     # ...
     - python
     - numpy
     - scipy
-    - boost
-#    - boost-python
+    - boost ==1.59
     - cairo
     - cairomm
     - pycairo
@@ -42,8 +40,7 @@ requirements:
     - python
     - numpy
     - scipy
-    - boost
-#    - boost-python
+    - boost ==1.59
     - cairo
     - cairomm
     - pycairo
