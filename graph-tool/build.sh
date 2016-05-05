@@ -17,7 +17,7 @@ export CC="gcc-5"
 export CXX="g++-5"
 ./autogen.sh
 ./configure --enable-openmp --enable-static --prefix="$PREFIX" --with-boost="$PREFIX" --with-boost-libdir="$PREFIX/lib" || { cat config.log ; exit 1 ; }  #-I$PREFIX/include/cairo -I$PREFIX/include/cairomm-1.0 -I$PREFIX/include/pycairo -I$PREFIX/include/sigc++-2.0 -I$PREFIX/include/freetype2 -I$PREFIX/lib/cairomm-1.0/include -I$PREFIX/lib/sigc++-2.0/include -I/usr/include -I/usr/include/X11 -I/usr/include/X11/extensions"   
-make
+make -j8
 make check
 make install
 

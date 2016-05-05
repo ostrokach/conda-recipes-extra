@@ -3,12 +3,12 @@ package:
   version: "10.1.13"
 
 source:
-  fn: mariadb-10.1.13.tar.gz
-  url: https://github.com/MariaDB/server/archive/mariadb-10.1.13.tar.gz
-  md5: 6d5938ae9aaae7143594a764b2dac986
+  fn: mariadb-10.1.13-linux-x86_64.tar.gz
+  url: http://mariadb.mirror.rafal.ca//mariadb-10.1.13/bintar-linux-x86_64/mariadb-10.1.13-linux-x86_64.tar.gz 
+  md5: 43615dea64840df3794a25128b93239e 
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:
