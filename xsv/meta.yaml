@@ -1,0 +1,30 @@
+{% set version = "0.9.14" %}
+
+package:
+  name: xsv
+  version: {{ version }}
+
+source:
+  fn: {{ version }}.tar.gz
+  url: https://github.com/BurntSushi/xsv/archive/{{ version }}.tar.gz 
+  md5: 23b705252b49765eb676b891e0b71d0c 
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - gcc
+    - rust
+  run:
+    - libgcc
+
+test:
+  commands:
+    - xsv --help 
+
+about:
+  home: https://github.com/BurntSushi/xsv 
+  license: MIT
+  summary: xsv is a command line program for indexing, slicing, analyzing, splitting and joining CSV files. 
+
