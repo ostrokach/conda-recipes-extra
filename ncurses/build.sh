@@ -1,15 +1,24 @@
 #!/bin/bash
 
-export CFLAGS="-I$PREFIX/include -I$PREFIX/include/ncurses"
+export CFLAGS="-I$PREFIX/include"
+export CPPFLAGS="-I$PREFIX/include"
+export CXXFLAGS="-I$PREFIX/include"
 export LDFLAGS="-L$PREFIX/lib"
 export CC=gcc
 
-mkdir -p $PREFIX/lib
-
-sh ./configure --prefix=$PREFIX \
-    --without-debug --without-ada --without-manpages \
-    --with-shared --disable-overwrite
-
-make -j$(getconf _NPROCESSORS_ONLN)
+./configure \
+    --prefix=$PREFIX \
+    --with-pkg-config="$PREFIX/lib/pkgconfig" \
+    --with-pkg-config-libdir="$PREFIX/lib/pkgconfig" \
+    --enable-pc-files \
+    --enable-widec \
+    --with-shared \
+    --with-cxx-shared \
+    --with-pthread \
+    --without-debug \
+    --without-manpages \
+    --disable-overwrite \
+    --disable-lib-suffixes
+make
 make install
 
