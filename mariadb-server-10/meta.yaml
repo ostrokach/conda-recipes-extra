@@ -8,36 +8,42 @@ source:
   md5: 43615dea64840df3794a25128b93239e 
 
 build:
-  number: 1
-  detect_binary_files_with_prefix: true
+  number: 0
+  # detect_binary_files_with_prefix: true
 
 requirements:
   build:
-    # - gcc
-    - cmake
-    - bison
-    - ncurses
-    - zlib
-    - lzo
-    - jemalloc ==3.6.0
-    - aio
-    - readline
-    - openssl
-    - zeromq
-    - libxml2
+#     # - gcc
+#     - cmake
+#     - bison
+#     - ncurses
+#     - zlib
+#     - lzo
+#     - jemalloc ==3.6.0
+#     - aio
+#     - readline
+#     - openssl
+#     - zeromq
+#     - libxml2
   run:
-    - libgcc
-    - ncurses ==5.9
-    - zlib
-    - lzo
-    - jemalloc ==3.6.0
+#     - libgcc
+#     - ncurses ==5.9
+#     - zlib
+#     - lzo
+#     - jemalloc ==3.6.0
     - aio
-    - readline
-    - openssl
-    - zeromq 
-    - libxml2
+#     - readline
+#     - openssl
+#     - zeromq 
+#     - libxml2
+
+test:
+  commands:
+    - mysql --help
+    - mysqld --help
 
 about:
-  home: https://mariadb.org/
+  home: https://mariadb.org
+  summary: MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL.
   license: GPL
 
