@@ -8,5 +8,5 @@ cd libaio-0.3.106
 make
 make prefix=$PREFIX install
 
-ln -s $PREFIX/lib/libaio.so $PREFIX/lib/libaio.so.1
+ln -sf $PREFIX/lib/libaio.so.1.0.1 $PREFIX/lib/libaio.so.1
 
