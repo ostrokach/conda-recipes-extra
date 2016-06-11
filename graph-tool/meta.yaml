@@ -1,13 +1,19 @@
+{% set version = "2.16" %}
+
 package:
   name: graph-tool
-  version: "2.16"
+  version: {{ version }}
 
 source:
-  git_url: https://git.skewed.de/count0/graph-tool.git
-  git_rev: release-2.16 
+  fn: graph-tool-{{ version }}.tar.bz2
+  url: https://downloads.skewed.de/graph-tool/graph-tool-{{ version }}.tar.bz2 
+  md5: c87ba05c20e619e2de933e11abae1591
 
 build:
-  number: 1 
+  number: 0
+  skip: True  # [win]
+  script_env:
+    - TMPDIR
   
 requirements:
   build:
@@ -16,7 +22,7 @@ requirements:
     - automake
     - pkg-config
     - libtool
-    # - gcc
+    - gcc
     # ...
     - python
     - numpy
@@ -62,4 +68,5 @@ test:
 about:
   summary: 'Efficient network analysis'
   license: GPL
+  summary: 'Efficent network analysis with Python.'
 
