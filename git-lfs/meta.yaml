@@ -1,0 +1,25 @@
+{% set version = "1.2.1" %}
+
+package:
+  name: "git-lfs"
+  version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  fn: git-lfs-linux-amd64-{{ version }}.tar.gz
+  url: https://github.com/github/git-lfs/releases/download/v{{ version }}/git-lfs-linux-amd64-{{ version }}.tar.gz 
+  md5: 3e2f843c4b70b5242ee63dedafd521f9 
+
+requirements:
+  build:
+    - git
+  run:
+    - git
+
+about:
+  home: https://github.com/github/git-lfs 
+  summary: Git extension for versioning large files. 
+  license: MIT
+
