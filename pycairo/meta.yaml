@@ -1,15 +1,17 @@
+{% set version = "1.10.0" %}
+
 package:
   name: pycairo
-  version: "1.10.0"
+  version: {{ version }}
 
 source:
-  git_url: git://git.cairographics.org/git/pycairo
-  git_tag: master
-  # fn: pycairo-1.10.0.tar.bz2
-  # url: http://cairographics.org/releases/pycairo-1.10.0.tar.bz2
+  fn: pycairo-{{ version }}.tar.bz2
+  url: http://cairographics.org/releases/pycairo-{{ version }}.tar.bz2
+  md5: e6fd3f2f1e6a72e0db0868c4985669c5
 
 build:
-  number: 5
+  number: 0
+  skip: True # [win]
 
 requirements:
   build:
@@ -26,4 +28,5 @@ test:
 about:
   home: http://cairographics.org/pycairo/
   license: LGPL 3
-  summary: 'Python 3 bindings for cairo'
+  summary: 'Python 3 bindings for cairo.'
+
