@@ -1,36 +1,40 @@
+{% set major_version = "2.48" %}
+{% set minor_version = "2" %}
+{% set version = major_version + "." + minor_version %}
+
 package:
   name: glib
-  version: "2.44.1"
+  version: {{ version }}
 
 source:
-  url: http://ftp.gnome.org/pub/gnome/sources/glib/2.44/glib-2.44.1.tar.xz 
-  fn: glib-2.44.1.tar.xz
+  url: http://ftp.gnome.org/pub/gnome/sources/glib/{{ major_version }}/glib-{{ version }}.tar.xz 
+  fn: glib-{{ version }}.tar.xz
+  sha256: f25e751589cb1a58826eac24fbd4186cda4518af772806b666a3f91f66e6d3f4
 
 build:
-  number: 2
+  number: 0
   detect_binary_files_with_prefix: true
 
 requirements:
   build:
-    - system
     - m4
     - autoconf
     - automake
     - libtool
     - pkg-config
-    - gcc
     - python 
     - libffi >=3.0.0
     - gettext
     - zlib
     - libsigcpp 
+    - pcre
   run:
-    - system
     - libffi >=3.0.0
     - gettext
     - zlib
     - libsigcpp 
-    
+    - pcre
+
 about:
   home: https://developer.gnome.org/glib/ 
   license: LGPL

@@ -1,19 +1,22 @@
+{% set major_version = "3.21" %}
+{% set minor_version = "0" %}
+{% set version = major_version + "." + minor_version %}
+
 package:
   name: pygobject
-  version: "3.18.2"
+  version: {{ version }}
 
 source:
-  fn: pygobject-3.18.2.tar.xz 
-  url: http://ftp.gnome.org/pub/GNOME/sources/pygobject/3.18/pygobject-3.18.2.tar.xz 
-  sha256: 2a3cad1517916b74e131e6002c3824361aee0671ffb0d55ded119477fc1c2c5f
+  fn: pygobject-{{ version }}.tar.xz 
+  url: http://ftp.gnome.org/pub/GNOME/sources/pygobject/{{ major_version }}/pygobject-{{ version }}.tar.xz 
+  md5: a6dba83e3a7df52ba80bd02906f74611 
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:
   build:
-    - gcc
     - m4
     - autoconf
     - automake
@@ -31,8 +34,6 @@ requirements:
     - gtk
     - pango
     - libffi
-    # Org.X
-    #- libxrender
   run:
     - libgcc
     - python
@@ -47,8 +48,6 @@ requirements:
     - gtk
     - pango
     - libffi
-    # Org.X
-    #- libxrender
 
 test:
   imports:
@@ -61,6 +60,6 @@ test:
 
 about:
   home: https://wiki.gnome.org/Projects/PyGObject 
-  license: LGPL 2.1
-  summary: 'PyGObject is a Python extension module that gives clean and consistent access to the entire GNOME software platform through the use of GObject Introspection.'
+  license: "LGPL 2.1"
+  summary: "PyGObject is a Python extension module that gives clean and consistent access to the entire GNOME software platform through the use of GObject Introspection."
 

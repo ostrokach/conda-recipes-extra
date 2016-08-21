@@ -1,15 +1,25 @@
 #!/bin/bash
 
+set -e
+
 # Need this line because gcc libraries are in $PREFIX/lib instead of $PREFIX/lib64
 ln -s $PREFIX/lib $PREFIX/lib64
+
+# For some reason, downloading graph-tool from meta.yml gives a checksum error...? 
+MD5SUM="9bec4f9659c8169298831a9acce2742e  graph-tool-2.18.tar.bz2"
+wget https://downloads.skewed.de/graph-tool/graph-tool-2.18.tar.bz2
+echo "$MD5SUM" | md5sum -c -
+tar xf graph-tool-2.18.tar.bz2
+cd graph-tool-2.18
 
 export ACLOCAL_FLAGS="-I$PREFIX/share/aclocal"
 export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig:$PREFIX/share/pkgconfig"
 
-export CFLAGS="-I/usr/lib/gcc/x86_64-linux-gnu/5.3.0/include -I$PREFIX/include"
+export CFLAGS="-I$PREFIX/include"
 export CXXFLAGS="$CFLAGS"
 export CPPFLAGS="$CFLAGS"
-export LDFLAGS="-L/usr/lib/gcc/x86_64-linux-gnu/5.3.0 -L$PREFIX/lib"
+
+export LDFLAGS="-L$PREFIX/lib"
 
 export CC="/usr/bin/gcc"  # gcc 5 inside Docker
 export CXX="/usr/bin/g++"  # g++ 5 inside Docker

@@ -11,6 +11,7 @@ export LDFLAGS="-L$PREFIX/lib64 -L$PREFIX/lib -L/usr/lib -L/usr/local/lib"
 
 ./configure \
     --prefix=$PREFIX \
+    --x-libraries=/usr/include/X11 \
     --disable-static \
     --enable-warnings \
     --enable-ft \
@@ -19,6 +20,10 @@ export LDFLAGS="-L$PREFIX/lib64 -L$PREFIX/lib -L/usr/lib -L/usr/local/lib"
     --enable-svg \
     --enable-gobject=yes \
     --enable-introspection=yes \
+    --enable-xlib \
+    --enable-xcb \
+    --enable-xlib-xcb \
+    --disable-xcb-shm \
     --disable-gtk-doc
 make
 make install

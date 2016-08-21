@@ -1,4 +1,7 @@
-FROM ostrokach/centos6-gcc5:squashed
+FROM ostrokach/centos6_gcc5:5.2.0-squashed
+
+RUN yum install patch && \
+    yum -y clean all
 
 # Install conda
 RUN mkdir -p /tmp/conda-build && \
@@ -21,9 +24,7 @@ RUN conda index /anaconda/conda-bld/linux-64 /anaconda/conda-bld/osx-64
 RUN conda config \
     --add channels ostrokach \ 
     --add channels defaults \
-    --add channels conda-forge \
-    --add channels omnia \
-    --add channels bioconda
+    --add channels conda-forge
 RUN cat ~/.condarc && conda info -a
 
 # Default command

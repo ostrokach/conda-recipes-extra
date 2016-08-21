@@ -1,14 +1,16 @@
+{% set version = "1.14.2" %}
+
 package:
   name: cairo
-  version: "1.14.2"
+  version: {{ version }}
 
 source:
-  url: http://cairographics.org/releases/cairo-1.14.2.tar.xz 
-  md5: e1cdfaf1c6c995c4d4c54e07215b0118  
-  fn: cairo-1.14.2.tar.xz
+  url: http://cairographics.org/releases/cairo-{{ version }}.tar.xz 
+  fn: cairo-{{ version }}.tar.xz
+  md5: e1cdfaf1c6c995c4d4c54e07215b0118
 
 build:
-  number: 1
+  number: 3
 
 requirements:
   build:
@@ -17,7 +19,6 @@ requirements:
     - automake
     - libtool
     - pkg-config
-    - gcc
     - boost
     - mm-common
     - libsigcpp
@@ -28,6 +29,7 @@ requirements:
     - glib
     - gobject-introspection
     - fontconfig
+    - libxcb
   run:
     - boost
     - mm-common
@@ -39,6 +41,7 @@ requirements:
     - glib
     - gobject-introspection
     - fontconfig
+    - libxcb
 
 about:
   home: http://cairographics.org/

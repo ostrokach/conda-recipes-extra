@@ -1,0 +1,45 @@
+# Copyright 2015 Peter Williams and collaborators.
+# This file is licensed under a 3-clause BSD license; see LICENSE.txt.
+
+# This single package includes a fairly complete X11 stack. This is needed
+# because Gtk+ 3 requires XInput version 2, which is not availabe on
+# RHEL/CentOS 5, and (shockingly) there are machines out there still stuck
+# on that ancient OS.
+
+# HACK: the current (8.5.18-0) version of `tk` on OS X includes some random
+# X11 headers. To build we need Python which means we need tk, so tk's headers
+# take precedence when the package is generated -- so, for instance, our
+# package cannot contain include/X11/Xlib.h. We use a post-link script to work
+# around this in horrible fashion. See
+# https://github.com/ContinuumIO/anaconda-issues/issues/600 .
+{% set version = "2016.09" %}
+
+package:
+  name: modern-xorg-stack
+  version: {{ version }}
+
+source:
+  fn: modern-xorg-stack-{{ version }}.tar.bz2
+  url: http://kimweb1.ccbr.utoronto.ca/library/conda/modern-xorg-stack-{{ version }}.tar.bz2 
+  sha256: 8b49bc94ee51001f108ce5c76a9b80a855592609fbf73cbed8aee847640db8cb 
+  patches:
+    - no-lib64.patch
+
+build:
+  number: 5
+  detect_binary_files_with_prefix: true
+  script_env:
+    - NJOBS
+
+requirements:
+  build:
+    - python
+    - gettext
+  run:
+    - gettext
+
+about:
+  home: http://www.x.org/
+  license: X.org license
+  summary: Modern versions of the X11 client libraries.
+

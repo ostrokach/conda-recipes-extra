@@ -1,33 +1,31 @@
-{% set version = "2.16" %}
+{% set version = "2.18" %}
 
 package:
   name: graph-tool
   version: {{ version }}
 
-source:
-  fn: graph-tool-{{ version }}.tar.bz2
-  url: https://downloads.skewed.de/graph-tool/graph-tool-{{ version }}.tar.bz2 
-  md5: c87ba05c20e619e2de933e11abae1591
+# source:
+#   fn: graph-tool-{{ version }}.tar.bz2
+#   url: https://downloads.skewed.de/graph-tool/graph-tool-{{ version }}.tar.bz2 
+#   md5: 9bec4f9659c8169298831a9acce2742e 
 
 build:
-  number: 0
+  number: 3
   skip: True  # [win]
-  script_env:
-    - TMPDIR
-  
+
 requirements:
   build:
+    # Build tools
     - m4
     - autoconf
     - automake
     - pkg-config
     - libtool
-    - gcc
     # ...
     - python
     - numpy
     - scipy
-    - boost ==1.59
+    - boost # ==1.59
     - cairo
     - cairomm
     - pycairo
@@ -41,12 +39,10 @@ requirements:
     - librsvg
     - bzip2
   run:
-    - libgcc-5
-    # ...
     - python
     - numpy
     - scipy
-    - boost ==1.59
+    - boost # ==1.59
     - cairo
     - cairomm
     - pycairo
@@ -55,10 +51,12 @@ requirements:
     - freetype
     - expat
     - libpng
-    - pygobject 
     - fontconfig
-    - librsvg
     - bzip2
+    # Needed for plotting:
+    # - librsvg
+    # - pygobject 
+    # - matplotlib
 
 test:
   imports:
@@ -66,7 +64,7 @@ test:
     - graph_tool.all
 
 about:
-  summary: 'Efficient network analysis'
+  home: https://graph-tool.skewed.de
   license: GPL
   summary: 'Efficent network analysis with Python.'
 
