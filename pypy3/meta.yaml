@@ -1,0 +1,35 @@
+{% set version = "5.2" %}
+
+package:
+  name: pypy3.3
+  version: {{ version }}
+
+build:
+  number: 2
+
+source:
+  fn: pypy3.3-{{ version }}-alpha-20160602-linux_x86_64-portable.tar.bz2
+  url: https://bitbucket.org/squeaky/portable-pypy/downloads/pypy3.3-{{ version }}-alpha-20160602-linux_x86_64-portable.tar.bz2 
+  md5: 0a2332b60a40e6fd3c8625ffc4f0ef9c
+
+requirements:
+  run:
+    - openssl
+    - sqlite
+    - system
+    - tk
+    - zlib
+    - bzip2
+    - libffi
+    - expat
+    - ncurses
+
+test:
+  commands:
+    - pypy3 --help
+
+about:
+  home: http://pypy.org/ 
+  license: MIT
+  summary: PyPy is a Python interpreter and just-in-time compiler.
+
