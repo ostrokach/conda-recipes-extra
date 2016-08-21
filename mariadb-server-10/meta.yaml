@@ -1,11 +1,13 @@
+{% set version = "10.1.16" %}
+
 package:
   name: mariadb-server
-  version: "10.1.13"
+  version: {{ version }}
 
 source:
-  fn: mariadb-10.1.13-linux-x86_64.tar.gz
-  url: http://mariadb.mirror.rafal.ca//mariadb-10.1.13/bintar-linux-x86_64/mariadb-10.1.13-linux-x86_64.tar.gz 
-  md5: 43615dea64840df3794a25128b93239e 
+  fn: mariadb-{{ version }}-linux-x86_64.tar.gz
+  url: http://mariadb.mirror.iweb.com//mariadb-10.1.16/bintar-linux-x86_64/mariadb-{{ version }}-linux-x86_64.tar.gz 
+  md5: afda6203b49fc3a8ef23d4208d156f2d 
 
 build:
   number: 0
@@ -41,6 +43,7 @@ test:
   commands:
     - mysql --help
     - mysqld --help
+    # - [[ -e "$PATH/lib/plugin/connect.so" ]]
 
 about:
   home: https://mariadb.org
