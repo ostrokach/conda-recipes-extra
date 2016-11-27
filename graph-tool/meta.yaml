@@ -1,16 +1,16 @@
-{% set version = "2.18" %}
+{% set version = "2.19" %}
 
 package:
   name: graph-tool
   version: {{ version }}
 
 # source:
-#   fn: graph-tool-{{ version }}.tar.bz2
-#   url: https://downloads.skewed.de/graph-tool/graph-tool-{{ version }}.tar.bz2 
-#   md5: 9bec4f9659c8169298831a9acce2742e 
+#  fn: graph-tool-{{ version }}.tar.bz2
+#  url: https://downloads.skewed.de/graph-tool/graph-tool-{{ version }}.tar.bz2 
+#  sha256: eba1090f94b0434890beedaf0c100dd0fc77e41ebfe29b4725d76cadb82099af 
 
 build:
-  number: 3
+  number: 0
   skip: True  # [win]
 
 requirements:
@@ -34,10 +34,11 @@ requirements:
     - freetype
     - expat
     - libpng
-    - pygobject
     - fontconfig
-    - librsvg
     - bzip2
+    # 
+    - librsvg
+    - pygobject
   run:
     - python
     - numpy

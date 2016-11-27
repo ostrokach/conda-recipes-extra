@@ -6,11 +6,11 @@ set -e
 ln -s $PREFIX/lib $PREFIX/lib64
 
 # For some reason, downloading graph-tool from meta.yml gives a checksum error...? 
-MD5SUM="9bec4f9659c8169298831a9acce2742e  graph-tool-2.18.tar.bz2"
-wget https://downloads.skewed.de/graph-tool/graph-tool-2.18.tar.bz2
+MD5SUM="6b68edf0ef5efc375b467a7a117eb9c2  graph-tool-2.19.tar.bz2"
+wget https://downloads.skewed.de/graph-tool/graph-tool-2.19.tar.bz2
 echo "$MD5SUM" | md5sum -c -
-tar xf graph-tool-2.18.tar.bz2
-cd graph-tool-2.18
+tar xf graph-tool-2.19.tar.bz2
+cd graph-tool-2.19
 
 export ACLOCAL_FLAGS="-I$PREFIX/share/aclocal"
 export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig:$PREFIX/share/pkgconfig"
