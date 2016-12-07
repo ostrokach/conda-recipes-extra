@@ -1,7 +1,9 @@
+{% set name = "graph-tool" %}
 {% set version = "2.19" %}
+{% set BOOST_VERSION = "1.61" %}
 
 package:
-  name: graph-tool
+  name: {{ name|lower }}
   version: {{ version }}
 
 # source:
@@ -10,8 +12,8 @@ package:
 #  sha256: eba1090f94b0434890beedaf0c100dd0fc77e41ebfe29b4725d76cadb82099af 
 
 build:
-  number: 0
   skip: True  # [win]
+  number: 1
 
 requirements:
   build:
@@ -25,7 +27,7 @@ requirements:
     - python
     - numpy
     - scipy
-    - boost # ==1.59
+    - boost {{BOOST_VERSION}}*
     - cairo
     - cairomm
     - pycairo
@@ -40,14 +42,15 @@ requirements:
     - librsvg
     - pygobject
   run:
+    - libgcc >=5.2.0
     - python
     - numpy
     - scipy
-    - boost # ==1.59
+    - boost {{BOOST_VERSION}}*
     - cairo
     - cairomm
     - pycairo
-    - cgal
+    - cgal 4.9*
     - sparsehash
     - freetype
     - expat
