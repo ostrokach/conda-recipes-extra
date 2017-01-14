@@ -1,0 +1,55 @@
+{% set version = "10.1.17" %}
+
+package:
+  name: mariadb-server
+  version: {{ version }}
+
+source:
+  fn: mariadb-{{ version }}-linux-x86_64.tar.gz
+  url: http://mariadb.mirror.iweb.com//mariadb-{{ version }}/bintar-linux-x86_64/mariadb-{{ version }}-linux-x86_64.tar.gz 
+  md5: 06d613922e93c826e2bb50e6998e83ab 
+
+build:
+  number: 0
+  # detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - unixodbc
+#     # - gcc
+#     - cmake
+#     - bison
+#     - ncurses
+#     - zlib
+#     - lzo
+#     - jemalloc ==3.6.0
+#     - aio
+#     - readline
+#     - openssl
+#     - zeromq
+#     - libxml2
+    
+  run:
+    - unixodbc
+    - aio
+#     - libgcc
+#     - ncurses ==5.9
+#     - zlib
+#     - lzo
+#     - jemalloc ==3.6.0
+#     - readline
+#     - openssl
+#     - zeromq 
+#     - libxml2
+
+test:
+  commands:
+    - mysql --help
+    - mysqld --help
+    # - [[ -e "$PATH/lib/plugin/connect.so" ]]
+
+about:
+  home: https://mariadb.org
+  summary: MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL.
+  license: GPL
+
