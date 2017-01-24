@@ -1,0 +1,34 @@
+{% set version = "1.5" %}
+
+package:
+  name: geoflow_c
+  version: {{ version }}
+
+# source:
+#   fn: maloc-{{ version }}.tar.gz
+#   url: http://www.fetk.org/codes/download/fetk-{{ version }}.tar.gz 
+#   sha256: de25f3f94bafcc3bd388b2fadca2c164fabb25a46dd8dcd0f59a68c6346c285d 
+
+build:
+  number: 2
+
+requirements:
+  build:
+    - cmake
+    - gcc
+    - eigen
+    - boost
+  run:
+    - libgcc
+    - eigen
+    - boost
+
+# test:
+#   commands:
+#     - maloc --help 
+
+about:
+  home: https://github.com/Electrostatics/geoflow_c 
+  summary: ... 
+  license: LGPL
+

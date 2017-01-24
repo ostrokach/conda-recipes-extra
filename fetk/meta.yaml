@@ -1,0 +1,29 @@
+{% set version = "1.5" %}
+
+package:
+  name: fetk
+  version: {{ version }}
+
+# source:
+#   fn: maloc-{{ version }}.tar.gz
+#   url: http://www.fetk.org/codes/download/fetk-{{ version }}.tar.gz 
+#   sha256: de25f3f94bafcc3bd388b2fadca2c164fabb25a46dd8dcd0f59a68c6346c285d 
+
+build:
+  number: 4
+
+requirements:
+  build:
+    - gcc
+    - modern-xorg-stack 
+  run:
+
+# test:
+#   commands:
+#     - maloc --help 
+
+about:
+  home: http://fetk.org/ 
+  summary: The Finite Element ToolKit (FETK) is a collaboratively developed, evolving collection of adaptive finite element method (AFEM) software libraries and tools for solving coupled systems of nonlinear geometric partial differential equations (PDE). 
+  license: LGPL
+

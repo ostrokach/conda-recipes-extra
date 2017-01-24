@@ -1,0 +1,59 @@
+{% set version = "1.5" %}
+
+package:
+  name: apbs
+  version: {{ version }}
+
+source:
+  fn: apbs-{{ version }}.tar.gz
+  url: https://github.com/Electrostatics/apbs-pdb2pqr/archive/apbs-{{ version }}.tar.gz 
+  sha256: f652ff07fde04e926b22e922d974b449e613aba9242e69e81d416c0ecb5f83cb 
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cmake
+    - libgcc
+    - swig
+    - python
+    - readline
+    - ncurses
+    # - mpich 
+    - fetk
+    - lapack
+    - blas
+    - openblas
+    - libgfortran
+    # - arpack 
+    - geoflow_c
+    # - msms
+    # - openblas
+  run:
+    - libgcc
+    - python
+    - readline
+    - ncurses
+    # - mpich
+    - fetk
+    - arpack
+    - lapack
+    - blas
+    - openblas
+    - libgfortran
+    # - arpack
+    - geoflow_c
+    # - msms
+    # - openblas
+
+test:
+  commands:
+    - apbs --help | grep "APBS -- Adaptive Poisson-Boltzmann Solver"
+    - apbs --version | grep "{{ version }}"
+
+about:
+  home: http://www.poissonboltzmann.org/ 
+  summary: Adaptive Poisson-Boltzmann Solver.
+  license: BSD
+
